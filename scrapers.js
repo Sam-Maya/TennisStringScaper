@@ -13,6 +13,8 @@ let allStringsData = []
 
 let table = []
 
+const finalObject = {};
+
 
 async function scrapeString(url){
     const browser = await puppeteer.launch()
@@ -25,7 +27,7 @@ async function scrapeString(url){
             const [el] = await page.$x(`//*[@id="searchresults"]/tbody/tr[${j}]/td[${i}]`)
             const td = await el.getProperty('textContent')
             const tdItem = await td.jsonValue()
-            
+
             table.push(tdItem)
         }
         
@@ -34,8 +36,14 @@ async function scrapeString(url){
         allStringsData.push(string)
         
         table = []
+
     }
-    fs.writeFileSync('stringDataBase.js', JSON.stringify(allStringsData, null, 2) , 'utf-8')
+
+    allStringsData.forEach((item) => {
+        finalObject[item["String"]] = item;
+    })
+
+    fs.writeFileSync('stringDataBase.js', JSON.stringify(finalObject, null, 2) , 'utf-8')
     
     browser.close()
 }
