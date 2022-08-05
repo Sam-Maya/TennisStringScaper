@@ -1,0 +1,2974 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>String Performance Database</title>
+	<meta name="keywords" content="tennis string, string comparison, stiffness, energy return, tension loss, tension stability, dwell time, gauge, elongation, deflection, shock, string material, nylon, polyester, gut">
+	<meta name="description" content="A tennis string comparison tool allowing the user to design reports on string stiffness, energy return, tension loss, peak impact force, impact tension increase, dwell time, deflection, etc., for user-defined impact conditions including string tension and swing speed.">
+<!--	<link rel="stylesheet" href="../stylesheets/university2.css">-->
+<link rel="stylesheet" type="text/css" href="../stylesheets/TWUresponsive2.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/experiments2.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/tools2.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/responsive-tables.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/stringdatabase2.css">
+<script src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+<script type="text/javascript" src="TWUresponsive2.js"></script>
+<script type="text/javascript" src="responsive-tables.js"></script>
+<!--<script type="text/javascript" src="reporter.js"></script>-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
+
+<!--or add the html5shiv.js file-->
+
+
+</head>
+
+
+
+
+
+<body>
+	<div id='wrapper' class='experiment'>
+				<div id="skiptocontent">
+					<a id="skip" href="#xbrandbox">Skip to property search menu</a>
+				</div>
+		<header class="clearfix">
+		<div id="bannerdiv">
+<!--			<nav><img src="https://twu.tennis-warehouse.com/images/navigation/TWU_banWhite.jpg" width="801" height="140"  alt="TWU banner" usemap="#TWU_banWhite_Map"><nav>-->
+			<nav><img src="../../images/navigation/TW_university_banner2.jpg" width="801" height="140"  alt="TWU banner" usemap="#TWU_banWhite_Map" alt="Navigation bannner">
+			<map name="TWU_banWhite_Map">
+			<area shape="rect" alt="Link to TWU Home" coords="381,105,573,132" href="https://twu.tennis-warehouse.com/learning_center/index.php" tabindex="0" role="navigation" id="twuhomebut"></area>
+			<area shape="rect" alt="Link to Tennis Warehouse Home" coords="585,105,782,132" href="https://www.tennis-warehouse.com" tabindex="0" role="navigation" id="twhomebut"></area>
+			</map></nav>
+		</div>
+		<div id="smallbannerdiv">
+			<nav>
+				<img  id="menuicon" src="https://twu.tennis-warehouse.com/images/navigation/menuiconnavy.jpg" alt="open menu" tabindex="0" role="button" class="help">
+				<img  id="closemenu" src="https://twu.tennis-warehouse.com/images/navigation/menuiconnavy.jpg" alt="close menu" tabindex="0" role="button">
+			<h3 class="smallbanner">		
+		<a href="https://twu.tennis-warehouse.com/learning_center/index.php" tabindex="0" id="TWUlink">TW University</a>
+			</h3>
+			<a href="https://twu.tennis-warehouse.com/learning_center/index.php" tabindex="-1" aria-hidden='true'><img id="logolink" class="TWUicon" src="https://twu.tennis-warehouse.com/images/navigation/TWUemblemsmall.png" alt="Go TWU Home" tabindex="0" role="button"/></a>
+			</nav>
+
+
+<!--			<img  id="closemenu" src="https://twu.tennis-warehouse.com/images/navigation/menuiconnavy.jpg" alt="close menu" tabindex="0" role="navigation">
+			<img  id="menuicon" src="https://twu.tennis-warehouse.com/images/navigation/menuiconnavy.jpg" alt="open menu" tabindex="0">-->
+		</div>
+<div id="navwrapper" tabindex="-1">
+<!--			<img  id="closemenu" src="../images/navigation/menuiconnavy.jpg" alt="menu icon">-->
+
+
+		<nav class="navprimary">
+<!--			<img id="closemenu" src="../images/navigation/menuiconnavy.jpg" alt="menu icon">-->
+			<section class="">
+			<ul class="mainmenu">
+				<li class="notchosen"><a id="home" tabindex="0" href="https://twu.tennis-warehouse.com/learning_center/index.php">Home</a></li>
+				<li class="notchosen"><a id="racquets" tabindex="0">Racquets </a></li>
+				<li class="notchosen"><a id="strings" tabindex="0">Strings </a></li>
+				<li class="notchosen"><a id="strokes" tabindex="0">Strokes</a></li>
+				<li class="notchosen"><a id="customization" tabindex="0">Customize</a></li>
+				<li class="notchosen"><a id="balls" tabindex="0">Balls</a></li>
+				<li class="notchosen"><a id="shoes" tabindex="0">Shoes</a></li>
+				<li class="notchosen"><a id="pickleball" tabindex="0">Pickleball</a></li>
+				<li class="notchosen"><a id="other" tabindex="0">Other</a></li>
+			</ul>
+			</section>
+		</nav>
+		
+
+		<div id="racquets-container" class="submenu-container">
+				<section class="column">
+					<ul class="submenu1">
+<li class="menucolhead"><a id="racquetsback" class="backmenu" href="javascript:void(0)" tabindex="0">Back To Main Menu</a> </li>
+<!--<li class="menucolhead" id="racquetsback" class="backmenu"  tabindex="0">Back To Main Menu </li>-->
+						<li class="menucolhead"><a id="racquettools" href="javascript:void(0)" class="topichead" >Tools</a>
+<!--						<li class="menucolhead" id="racquettools" class="topichead" >Tools-->
+
+							<ul class="submenu2">
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/recommender.cgi" tabindex="0">Racquet Recommender</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/racquetanalyzerTWU.cgi" tabindex="0">Racquet Performance Analysis</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/similar.cgi" tabindex="0">Similar Racquets</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/compareracquets.cgi" tabindex="0">Compare Racquets</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/comparepower.cgi" tabindex="0">Power</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/contours.cgi" tabindex="0">Sweet Zone Size</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/plowthrough.cgi" tabindex="0">Plow-through</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/comparespeed.cgi" tabindex="0">Shot Speed</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/hittingwtrac.cgi" tabindex="0">Hittingweight</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/racquetcontribution.cgi" tabindex="0">Racquet Contribution</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/trajectory_maker.cgi" tabindex="0">Shot Trajectory</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/vibfrequency.cgi" tabindex="0">Vibration</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="column">
+					<ul class="submenu1">
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Experiments</a>
+							<ul class="submenu2">
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/stringbeds.php">Energy Flow and Return Between a Tennis Ball and Stringbed</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/effectivemass.php">Effective Racquet Mass</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/controlpart1.php">Racquet Control &mdash; Part 1</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/freehandheld.php">Free-standing vs Hand-held Racquet Testing</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/spindemo.php">Spin Demo</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/racquetweighting.php">Racquet Weighting</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/spinpatterns.php">Spin Setups</a></li>
+								<li><a href='https://twu.tennis-warehouse.com/learning_center/stringpattern.php'>Spin &amp; String Pattern</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/location.php" class="horzline">Spin &amp; Impact Location</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="column">
+					<ul class="submenu1">
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Articles</a>
+							<ul class="submenu2">
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/racquetpower.php">Racquet Power</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/scoring.php">Scoring: Why Count One Point as Fifteen?</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/errors.php">Why You Sometimes Hit the Ball Out</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/totalperformance.php">The Total Performance Measurement</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/racquetcontribution.php">Does the Racquet Matter?</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/specsandspeed.php">Racquet Specs and Power</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/ppbasics.php">Power Potential Basics</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/maxspeedeasy.php">Shot Speed Basics</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/PPandspeed.php">Racquet Power and Shot Speed</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/powerterminology.php">Racquet Power Terminology</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/trajectory_info.php">Spin &amp; Trajectory Definitions</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/wtbalswt.php">Weight, Balance and Swingweight</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/howto_swingweight.php">How To Measure Swingweight</a></li>
+
+							</ul>
+						</li>
+					</ul>
+				</section>
+		</div>		
+
+ <!--end racquet submenu-container-->
+
+		<div id="strings-container" class="submenu-container" tabindex="0">
+				<section class="column">
+					<ul class="submenu1">
+<li class="menucolhead"><a id="stringsback" class="backmenu" href="javascript:void(0)" tabindex="0">Back To Main Menu</a> </li>
+
+<!--<li style='color:#00427a; font-style:bold; font-size:1rem;'>STRINGS</li>
+<li class='back' tabindex='0'>< BACK</li>-->
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Tools</a>
+							<ul class="submenu2">
+<!--<li style='color:#00427a; font-style:bold; font-size:1rem;'>STRING TOOLS</li>
+<li class='back' tabindex='0'><< BACK</li>-->
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/similarstrings.php">Find Similar Strings</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/comparestrings.php">Compare Strings</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/reporter2.php">String Performance Database</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/stringstiffnesstool.php">String Stiffness</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/spinpotentialtool.php">Spin Potential</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/stringfrictiontool.php">String Friction</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/ballfrictiontool.php">Ball Friction</a></li>
+								<!--<li><a href="https://twu.tennis-warehouse.com/learning_center/reporter.php">Performance Database</a></li>
+								<li><a href='https://twu.tennis-warehouse.com/learning_center/COFreporter.php'>String Friction Tool</a></li>
+							    <li><a href="https://twu.tennis-warehouse.com/cgi-bin/spinjpegs.cgi">Impact Photo Gallery</a></li>-->
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="column">
+					<ul class="submenu1">
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Experiments</a>
+							<ul class="submenu2">
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/edgeeffect.php">Variable Tension Stringing for Spin</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/temperature.php">Temperature and String Tension</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/spinandfriction.php">Spin and String Surface Roughness</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/singlestring.php">Single String Impacts</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/spinpatterns.php">Spin and Racquet Setups</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/spinexperiment.php">Spin &amp; Material</a></li>
+								<li><a href='https://twu.tennis-warehouse.com/learning_center/COF.php'>Spin &amp; Static Friction</a></li>
+								<li><a href='https://twu.tennis-warehouse.com/learning_center/slidingCOF.php'>Spin &amp; Sliding Friction</a></li>
+								<li><a href='https://twu.tennis-warehouse.com/learning_center/stringballfriction.php'>Spin &amp; Ball Friction</a></li>
+								<li><a href='https://twu.tennis-warehouse.com/learning_center/stringpattern.php'>Spin &amp; String Pattern</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/stringmovement.php">Spin and String Movement</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/stringmovementPart2.php">Spin &amp; String Snap-Back</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/spinandstiffness.php">Spin &amp; String Stiffness</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/spinandlubev2.php">Spin &amp; String Lubrication</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/location.php">Spin &amp; Impact Location</a></li>
+								<li><a href='https://twu.tennis-warehouse.com/learning_center/deadstrings.php'>Strings 'Going Dead' P1</a></li>
+								<li><a href='https://twu.tennis-warehouse.com/learning_center/deadstringsPart2.php'>Strings 'Going Dead' P2</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="column">
+					<ul class="submenu1">
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Articles</a>
+							<ul class="submenu2">
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/stringsandpower1.php">Why Is String Stiffness So Important To Power?</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/stringstiffness.php">String Stiffness: The Alpha and Omega of String Performance</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/howstringworks.php">String Stiffness &mdash; How It Works</a></li>
+								<!--<li><a href="https://twu.tennis-warehouse.com/learning_center/stringmovement.php">Spin and String Movement</a></li>-->
+							</ul>
+						</li>
+					</ul>
+				</section>
+		</div> <!--end string submenu-container-->
+
+
+		<div id="strokes-container" class="submenu-container" tabindex="0">
+				<section class="column">
+					<ul class="submenu1">
+<li class="menucolhead"><a id="strokesback" class="backmenu" href="javascript:void(0)" tabindex="0">Back To Main Menu</a> </li>
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Tools</a>
+							<ul class="submenu2">
+								  <li><a href="https://twu.tennis-warehouse.com/cgi-bin/trajectory_maker.cgi">Compare Strokes</a></li>
+							<!--	  <li><a href="https://twu.tennis-warehouse.com/learning_center/trajectories/trajectories.php">Shot Helper Tool</a></li>
+								  <li><a href="javascript:void%20window.open('https://twu.tennis-warehouse.com/cgi-bin/racquetspeed.cgi','','width=370,height=560,resizeable=no,toolbar=no,location=no')">Racquet Head Speed</a></li>-->
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="column">
+					<ul class="submenu1">
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Experiments</a>
+							<ul class="submenu2">
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/racquetweighting.php">Customizing Strokes &amp; Power</a></li>							  <li><a href="https://twu.tennis-warehouse.com/learning_center/kickserve.php">Kick Serve Physics</a></li>
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/doublependulum.php">Strokes &amp; Pendulums</a></li>
+
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="column">
+					<ul class="submenu1">
+<!--						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Articles</a>
+								<ul class="submenu2">
+									<li><a href="https://twu.tennis-warehouse.com/learning_center/kickserve.php">Kick Serve Physics</a></li>
+									<li><a href="https://twu.tennis-warehouse.com/learning_center/doublependulum.php">Strokes &amp; Pendulums</a></li>
+									<li><a href="https://twu.tennis-warehouse.com/learning_center/trajectory_info.php">Spin and Trajectory Definitions and Analysis</a></li>
+								</ul>
+
+						</li>-->
+					</ul>
+				</section>
+		</div> <!--end strokes submenu-container-->
+		
+
+		<div id="customization-container" class="submenu-container" tabindex="0">
+				<section class="column">
+					<ul class="submenu1">
+<li class="menucolhead"><a id="customizeback" class="backmenu" href="javascript:void(0)" tabindex="0">Back To Main Menu</a> </li>
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Tools</a>
+							<ul class="submenu2">
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/customization.php">Customization Tool</a></li>
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/customizationReverse.php">Customization Worksheet</a></li>
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/swingweight_calc.php">Swingweight Tool</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="column">
+					<ul class="submenu1">
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Experiments</a>
+							<ul class="submenu2">
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/racquetweighting.php">Customizing Strokes &amp; Power</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="column">
+					<ul class="submenu1">
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Articles</a>
+							<ul class="submenu2">
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/howto_swingweight.php">How To Measure Your Racquet's Swingweight</a></li>
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/maxshotspeed.php">Maximum Shot Speed &mdash; Where To Hit on the Racquet</a></li>
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/wtbalswt.php">Weight, Balance and Swingweight Explained</a></li>
+							</ul>
+
+						</li>
+					</ul>
+				</section>
+		</div> <!--end strokes submenu-container-->
+
+
+		<div id="balls-container" class="submenu-container" tabindex="0">
+				<section class="column">
+					<ul class="submenu1">
+<li class="menucolhead"><a id="ballsback" class="backmenu" href="javascript:void(0)" tabindex="0">Back To Main Menu</a> </li>
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Tools</a>
+							<ul class="submenu2">
+								<li><a href="https://twu.tennis-warehouse.com/cgi-bin/trajectory_maker.cgi">Shot Trajectory</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="column">
+					<ul class="submenu1">
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Experiments</a>
+							<ul class="submenu2">
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/ballexperiment.php">Tennis Ball Performance Testing</a></li>
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/aerodynamics2.php">Tennis Ball Trajectories: Aerodynamic Drag and Lift in Tennis Shots</a></li>							  
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/balltesting.php">Tennis Ball Properties</a></li>							  
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="column">
+					<ul class="submenu1">
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Articles</a>
+							<ul class="submenu2">
+								<li><a href="returndeformation.php">Ball Testing: Return Deformation</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+		</div> <!--end balls submenu-container-->
+
+
+
+		<div id="shoes-container" class="submenu-container" tabindex="0">
+
+				<section class="column">
+					<ul class="submenu1">
+<li class="menucolhead"><a id="shoesback" class="backmenu" href="javascript:void(0)" tabindex="0">Back To Main Menu</a> </li>
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Tools</a>
+							<ul class="submenu2">
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/FootwearCushioningTool.php">Footwear Cushioning Tool</a></li>
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/FootwearTractionTool.php">Footwear Traction Tool</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+
+
+
+
+				<section class="column">
+					<ul class="submenu1">
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Experiments</a>
+							<ul class="submenu2">
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/cushioning.php">Tennis Shoe Cushioning: Impact Testing To Compare Tennis Shoes</a></li>							  
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/traction.php">Tennis Shoe Traction: Developing A Test Rig To Measure Shoe Traction On Tennis Courts</a></li>							  
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/foam.php">Foam Cushioning Properties: Choosing Material for Tennis Shoe Soles</a></li>							  
+							</ul>
+						</li>
+					</ul>
+				</section>
+		</div> <!--end shoes submenu-container-->
+
+
+		<div id="pickleball-container" class="submenu-container" tabindex="0">
+			<section class="column">
+				<ul class="submenu1">
+					<li class="menucolhead"><a id="pickleback" class="backmenu" href="javascript:void(0)" tabindex="0">Back To Main Menu</a> </li>
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Pickleball Tools</a>
+							<ul class="submenu2">
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/pickleball/comparepaddles.php">Compare Pickleball Paddles</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/pickleball/paddlespecstool.php">Pickleball Propterties Tool</a></li>
+								<li><a href="https://twu.tennis-warehouse.com/learning_center/pickleball/picklesimilar.php">Similar Paddles Tool</a></li>
+							</ul>
+						</li>
+					</ul>
+			</section>
+		</div>
+
+
+
+
+		<div id="other-container" class="submenu-container" tabindex="0">
+				<section class="column">
+					<ul class="submenu1">
+<li class="menucolhead"><a id="otherback" class="backmenu" href="javascript:void(0)" tabindex="0">Back To Main Menu</a> </li>
+						<li class="menucolhead"><a href="javascript:void(0)" class="topichead">Hockey Experiments</a>
+							<ul class="submenu2">
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/hockeyvelocity.php">Hockey Stick Contribution to Puck Speed in Slap Shots</a></li>							  
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/hockeyphysics.php">Introduction to the Physics of Hockey Sticks</a></li>							  
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/hockeyflex.php">Flex of a Hockey Stick</a></li>							  
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/hockeyflexprofiles.php">Hockey Stick Flex Profiles</a></li>							  
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/hockeykickpoint.php">Hockey Stick Kick Point</a></li>							  
+							<li><a href="https://twu.tennis-warehouse.com/learning_center/hockeyswingweight.php">Swingweight of Hockey Sticks</a></li>							  
+							</ul>
+						</li>
+					</ul>
+				</section>
+		</div> <!--end shoes submenu-container-->
+
+
+</div> <!--end navwrapper-->
+
+</header>	
+	
+	
+	<div id='content'>
+		<img id="side-menu-icon" tabindex="0" src="../images/navigation/arrow_5_left.png" alt="side menu slider button" role="button">
+		<img tabindex="0" id="to-top" class="to-top-big" src="../images/navigation/arrow_5_up.png" alt="to top button" role="button">
+	
+	
+	<div class='toolwrapper'>
+		<header class='titleheader'>
+			<div id='title' class='title'>String Performance Database
+			</div>
+		</header>
+				
+		<div class='tooldiv'>
+			<div class='toolresults'>
+		<p class="infopara"><button class="infobutton2">Show Instructions</button></p>
+		<p class="moreinfodiv">Select data to be viewed from table at right. Column one will remain fixed while the others will scroll left and right by (1) clicking the left right blue arrows, (2) clicking the blue boundary on the right and left of the table, (3) scrolling with the mouse, or (4) sideways swiping on mobile divices. Column one will also scroll separately from left to right as window size shrinks. <em>On small window sizes</em>, the right hand table is toggled by clicking the big left pointing arrow in the upper right corner.</p>
+
+			<div class="arrowdiv">
+				<div  class="tableleft" tabindex="0" role="button"><img src="../images/buttonleft.png"   alt="left arrow." tabindex="0" role="button"></div>
+				<div class="tableright" tabindex="0" role="button"><img src="../images/buttonright.png"   alt="right arrow." tabindex="0" role="button"></div>
+				<div class="responsivetablediv">
+
+				<table id="searchresults" class="tablescompactstriped responsive" tabindex="-1">
+
+				<tr>
+				<!--<th>Item</th>--><th>String</th><th>Material</th><th>Stiffness (lb/in)</th><th>Tension Loss (%)</th><th>Spin Potential</th>
+				</tr>
+				<tr>
+				<!--<td>1</td>--><td class='tdleft'>Alien Black Diamond 16</td><td>Polyester</td><td>190.3</td><td>50.7</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>2</td>--><td class='tdleft'>Alpha Gut 2000 16</td><td>Nylon</td><td>159.4</td><td>16.5</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>3</td>--><td class='tdleft'>Ashaway Dynamite Soft 17</td><td>Nylon/Zyex</td><td>120.0</td><td>28.1</td><td>2.6</td>
+				</tr>
+				<tr>
+				<!--<td>4</td>--><td class='tdleft'>Ashaway MonoGut 16L</td><td>Polyester</td><td>202.9</td><td>47.0</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>5</td>--><td class='tdleft'>Ashaway Synthetic Gut 16</td><td>Nylon</td><td>166.9</td><td>24.3</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>6</td>--><td class='tdleft'>Ashaway Dynamite 17</td><td>Nylon/Zyex</td><td>127.4</td><td>29.9</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>7</td>--><td class='tdleft'>Ashaway MonoGut 17</td><td>Polyester</td><td>188.6</td><td>50.9</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>8</td>--><td class='tdleft'>Ashaway MonoGut ZX 16</td><td>Nylon/Zyex</td><td>105.7</td><td>47.6</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>9</td>--><td class='tdleft'>Ashaway Liberty 16</td><td>Nylon</td><td>167.4</td><td>24.8</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>10</td>--><td class='tdleft'>Ashaway Dynamite Soft 18</td><td>Nylon/Zyex</td><td>108.0</td><td>28.1</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>11</td>--><td class='tdleft'>Ashaway Dynamite WB 16</td><td>Nylon/Zyex</td><td>125.2</td><td>32.9</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>12</td>--><td class='tdleft'>Babolat Synthetic Gut 17 (1.25)</td><td>Nylon</td><td>162.3</td><td>17.4</td><td>6.0</td>
+				</tr>
+				<tr>
+				<!--<td>13</td>--><td class='tdleft'>Babolat RPM Blast 17/1.25</td><td>Polyester</td><td>233.7</td><td>33.3</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>14</td>--><td class='tdleft'>Babolat M7 16 (1.30)</td><td>Nylon</td><td>160.6</td><td>18.7</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>15</td>--><td class='tdleft'>Babolat Ballistic Polymono 16</td><td>Polyester</td><td>217.7</td><td>45.9</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>16</td>--><td class='tdleft'>Babolat Hurricane Feel 17</td><td>Polyester</td><td>239.5</td><td>31.9</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>17</td>--><td class='tdleft'>Babolat Super Fine Play 16</td><td>Nylon</td><td>191.5</td><td>21.7</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>18</td>--><td class='tdleft'>Babolat RPM Blast Rough 17</td><td>Polyester</td><td>196.0</td><td>35.7</td><td>9.9</td>
+				</tr>
+				<tr>
+				<!--<td>19</td>--><td class='tdleft'>Babolat Duralast 16</td><td>Polyester</td><td>207.5</td><td>48.5</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>20</td>--><td class='tdleft'>Babolat Xcel 16</td><td>Nylon</td><td>150.9</td><td>18.9</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>21</td>--><td class='tdleft'>Babolat VS Natural ThermoGut 16 Touch</td><td>Gut</td><td>96.0</td><td>18.7</td><td>2.7</td>
+				</tr>
+				<tr>
+				<!--<td>22</td>--><td class='tdleft'>Babolat RPM Soft 16 (1.30)</td><td>Nylon</td><td>154.9</td><td>18.5</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>23</td>--><td class='tdleft'>Babolat Pro Hurricane 17</td><td>Polyester</td><td>192.6</td><td>42.0</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>24</td>--><td class='tdleft'>Babolat VS Natural Team Gut 17 (1.25)</td><td>Gut</td><td>92.0</td><td>15.2</td><td>0.0</td>
+				</tr>
+				<tr>
+				<!--<td>25</td>--><td class='tdleft'>Babolat Xcel Premium 17</td><td>Nylon</td><td>148.0</td><td>19.7</td><td>0.0</td>
+				</tr>
+				<tr>
+				<!--<td>26</td>--><td class='tdleft'>Babolat RPM Blast 15L (1.35)</td><td>Polyester</td><td>236.6</td><td>32.9</td><td>7.3</td>
+				</tr>
+				<tr>
+				<!--<td>27</td>--><td class='tdleft'>Babolat VS Touch 15L (1.35)</td><td>Gut</td><td>88.6</td><td>12.4</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>28</td>--><td class='tdleft'>Babolat Duralast 17</td><td>Polyester</td><td>219.5</td><td>43.0</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>29</td>--><td class='tdleft'>Babolat Addiction 17</td><td>Nylon</td><td>153.7</td><td>20.1</td><td>2.6</td>
+				</tr>
+				<tr>
+				<!--<td>30</td>--><td class='tdleft'>Babolat Origin 16 (1.30)</td><td>Nylon</td><td>166.9</td><td>15.0</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>31</td>--><td class='tdleft'>Babolat Xcel French Open Black 16</td><td>Nylon</td><td>144.6</td><td>13.3</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>32</td>--><td class='tdleft'>Babolat Conquest 16</td><td>Nylon</td><td>174.9</td><td>30.2</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>33</td>--><td class='tdleft'>Babolat RPM Blast Rough 15L</td><td>Polyester</td><td>199.5</td><td>37.0</td><td>7.3</td>
+				</tr>
+				<tr>
+				<!--<td>34</td>--><td class='tdleft'>Babolat Attraction 16</td><td>Nylon/Polyurethane</td><td>157.7</td><td>20.0</td><td>2.7</td>
+				</tr>
+				<tr>
+				<!--<td>35</td>--><td class='tdleft'>Babolat Pro Hurricane Tour 17</td><td>Polyester</td><td>214.9</td><td>44.8</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>36</td>--><td class='tdleft'>Babolat Tonic + Natural Gut 16</td><td>Gut</td><td>98.9</td><td>14.9</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>37</td>--><td class='tdleft'>Babolat SG SpiralTek 16</td><td>Nylon</td><td>161.7</td><td>15.3</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>38</td>--><td class='tdleft'>Babolat Addiction 16</td><td>Nylon</td><td>167.4</td><td>20.1</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>39</td>--><td class='tdleft'>Babolat RPM Team 17 (1.25)</td><td>Nylon/Polyester</td><td>245.2</td><td>23.2</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>40</td>--><td class='tdleft'>Babolat Revenge 16</td><td>Polyester</td><td>276.0</td><td>37.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>41</td>--><td class='tdleft'>Babolat RPM Team 16 Black</td><td>Polyester</td><td>280.6</td><td>22.0</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>42</td>--><td class='tdleft'>Babolat Xcel Power 17</td><td>Nylon</td><td>145.7</td><td>21.7</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>43</td>--><td class='tdleft'>Babolat Synthetic Gut 16 (1.30)</td><td>Nylon</td><td>169.2</td><td>17.5</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>44</td>--><td class='tdleft'>Babolat RPM Dual 16</td><td>Polyester</td><td>237.2</td><td>34.9</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>45</td>--><td class='tdleft'>Babolat Hurricane Feel 16</td><td>Polyester</td><td>249.7</td><td>30.7</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>46</td>--><td class='tdleft'>Babolat Xcel Power 16</td><td>Nylon</td><td>162.3</td><td>18.9</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>47</td>--><td class='tdleft'>Babolat SpiralTek 17</td><td>Nylon</td><td>149.2</td><td>17.0</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>48</td>--><td class='tdleft'>Babolat Pro Hurricane 16</td><td>Polyester</td><td>204.0</td><td>39.6</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>49</td>--><td class='tdleft'>Babolat RPM Blast 16</td><td>Polyester</td><td>232.6</td><td>45.9</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>50</td>--><td class='tdleft'>Babolat FiberTour 16</td><td>Nylon</td><td>163.4</td><td>22.8</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>51</td>--><td class='tdleft'>Babolat RPM Blast Orange 16 (1.30)</td><td>Polyester</td><td>210.3</td><td>38.9</td><td>7.0</td>
+				</tr>
+				<tr>
+				<!--<td>52</td>--><td class='tdleft'>Babolat Revenge 17</td><td>Polyester</td><td>222.3</td><td>48.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>53</td>--><td class='tdleft'>Babolat Pro Hurricane Tour 16</td><td>Polyester</td><td>227.5</td><td>46.1</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>54</td>--><td class='tdleft'>Babolat Origin 17</td><td>Nylon</td><td>171.5</td><td>17.3</td><td>6.4</td>
+				</tr>
+				<tr>
+				<!--<td>55</td>--><td class='tdleft'>Babolat RPM Blast Rough 16</td><td>Polyester</td><td>209.7</td><td>29.5</td><td>8.2</td>
+				</tr>
+				<tr>
+				<!--<td>56</td>--><td class='tdleft'>Babolat RPM Blast 18 (1.20)</td><td>Polyester</td><td>189.2</td><td>36.1</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>57</td>--><td class='tdleft'>Babolat Pro Hurricane 18</td><td>Polyester</td><td>185.2</td><td>37.2</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>58</td>--><td class='tdleft'>Boris Becker Bomber NYC 16 (1.28)</td><td>Polyester</td><td>208.0</td><td>28.2</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>59</td>--><td class='tdleft'>Boris Becker Bomber 16</td><td>Polyester</td><td>204.6</td><td>46.9</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>60</td>--><td class='tdleft'>Boris Becker Bomber 17</td><td>Polyester</td><td>182.3</td><td>48.4</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>61</td>--><td class='tdleft'>Boris Becker Bomber NYC 17 (1.23)</td><td>Polyester</td><td>205.7</td><td>27.4</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>62</td>--><td class='tdleft'>Boris Becker Pulse 16 (1.32)</td><td>Nylon</td><td>144.0</td><td>17.0</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>63</td>--><td class='tdleft'>Diadem Solstice Power 16L (1.25)</td><td>Polyester</td><td>209.2</td><td>27.1</td><td>7.3</td>
+				</tr>
+				<tr>
+				<!--<td>64</td>--><td class='tdleft'>Diadem Impulse 16 (1.32)</td><td>Nylon</td><td>149.7</td><td>18.3</td><td>0.0</td>
+				</tr>
+				<tr>
+				<!--<td>65</td>--><td class='tdleft'>Diadem Solstice Power 16 (1.30)</td><td>Polyester</td><td>202.9</td><td>29.6</td><td>8.1</td>
+				</tr>
+				<tr>
+				<!--<td>66</td>--><td class='tdleft'>Diadem Solstice Pro 15L (1.35)</td><td>Polyester</td><td>192.6</td><td>28.0</td><td>7.1</td>
+				</tr>
+				<tr>
+				<!--<td>67</td>--><td class='tdleft'>Diadem Impulse 17 (1.25)</td><td>Nylon</td><td>141.7</td><td>21.5</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>68</td>--><td class='tdleft'>Diadem Solstice Power 17 (1.20)</td><td>Polyester</td><td>196.6</td><td>28.5</td><td>8.6</td>
+				</tr>
+				<tr>
+				<!--<td>69</td>--><td class='tdleft'>Diadem Elite XT 16</td><td>Polyester</td><td>204.6</td><td>40.4</td><td>8.7</td>
+				</tr>
+				<tr>
+				<!--<td>70</td>--><td class='tdleft'>Diadem Solstice Pro 16L (1.25)</td><td>Polyester</td><td>190.3</td><td>29.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>71</td>--><td class='tdleft'>Diadem Solstice Power 15L (1.35)</td><td>Polyester</td><td>228.6</td><td>29.6</td><td>7.1</td>
+				</tr>
+				<tr>
+				<!--<td>72</td>--><td class='tdleft'>Diadem Solstice Blace 17 (1.20)</td><td>Polyester</td><td>161.7</td><td>52.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>73</td>--><td class='tdleft'>Diadem Solstice Pro 16L (1.25)</td><td>Polyester</td><td>178.9</td><td>31.4</td><td>7.3</td>
+				</tr>
+				<tr>
+				<!--<td>74</td>--><td class='tdleft'>Diadem Elite XT 17</td><td>Polyester</td><td>189.2</td><td>31.7</td><td>9.3</td>
+				</tr>
+				<tr>
+				<!--<td>75</td>--><td class='tdleft'>Double AR 666 (1.30)</td><td>Nylon</td><td>161.7</td><td>24.3</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>76</td>--><td class='tdleft'>Double AR Diablo (1.31)</td><td>Polyester</td><td>169.7</td><td>55.7</td><td>7.7</td>
+				</tr>
+				<tr>
+				<!--<td>77</td>--><td class='tdleft'>Double AR Raptor 1.27</td><td>Polyester</td><td>238.3</td><td>22.3</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>78</td>--><td class='tdleft'>Double AR WTS 25 (1.25)</td><td>Polyester</td><td>168.0</td><td>56.5</td><td>7.3</td>
+				</tr>
+				<tr>
+				<!--<td>79</td>--><td class='tdleft'>Double AR Twice Dragon(1.30)</td><td>Polyester</td><td>170.9</td><td>51.2</td><td>7.2</td>
+				</tr>
+				<tr>
+				<!--<td>80</td>--><td class='tdleft'>Double AR Twice Shark (1.25)</td><td>Polyester</td><td>143.4</td><td>63.8</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>81</td>--><td class='tdleft'>Double AR Diablo (1.24)</td><td>Polyester</td><td>166.9</td><td>55.4</td><td>7.4</td>
+				</tr>
+				<tr>
+				<!--<td>82</td>--><td class='tdleft'>Dunlop Black Widow 16</td><td>Polyester</td><td>193.2</td><td>38.2</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>83</td>--><td class='tdleft'>Dunlop Explosive Speed 17 (1.25)</td><td>Polyester</td><td>249.7</td><td>17.6</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>84</td>--><td class='tdleft'>Dunlop Explosive 17 (1.26)</td><td>Polyester</td><td>192.0</td><td>32.4</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>85</td>--><td class='tdleft'>Dunlop Explosive Synthetic Gut 17</td><td>Nylon</td><td>175.5</td><td>18.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>86</td>--><td class='tdleft'>Dunlop Black Widow 18 (1.21)</td><td>Polyester</td><td>194.9</td><td>30.9</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>87</td>--><td class='tdleft'>Dunlop Hexy Fiber 16</td><td>Nylon</td><td>141.7</td><td>25.2</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>88</td>--><td class='tdleft'>Dunlop Juice 17 (1.26)</td><td>Polyester</td><td>208.6</td><td>45.8</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>89</td>--><td class='tdleft'>Dunlop Explosive Synthetic 16</td><td>Nylon</td><td>179.5</td><td>20.6</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>90</td>--><td class='tdleft'>Dunlop S-Gut 17</td><td>Nylon/Polyurethane</td><td>163.4</td><td>21.4</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>91</td>--><td class='tdleft'>Dunlop Comfort Synthetic 16</td><td>Nylon</td><td>177.2</td><td>19.7</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>92</td>--><td class='tdleft'>Dunlop Explosive Bite 17 (1.27)</td><td>Polyester</td><td>201.7</td><td>28.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>93</td>--><td class='tdleft'>Dunlop Iconic Touch 17 (1.25)</td><td>Nylon</td><td>153.7</td><td>18.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>94</td>--><td class='tdleft'>Dunlop S-Gut 16 (1.32)</td><td>Nylon</td><td>158.3</td><td>15.5</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>95</td>--><td class='tdleft'>Dunlop Iconic Speed 17 (1.25)</td><td>Nylon</td><td>144.0</td><td>20.6</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>96</td>--><td class='tdleft'>Dunlop Explosive 18 (1.20)</td><td>Polyester</td><td>194.3</td><td>28.7</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>97</td>--><td class='tdleft'>Dunlop Black Widow 17</td><td>Polyester</td><td>216.6</td><td>31.6</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>98</td>--><td class='tdleft'>Dunlop Ice 16 (1.30)</td><td>Polyester</td><td>204.6</td><td>45.4</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>99</td>--><td class='tdleft'>Dunlop Explosive 16</td><td>Polyester</td><td>233.2</td><td>35.8</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>100</td>--><td class='tdleft'>Dunlop Juice 16 (1.31)</td><td>Polyester</td><td>215.5</td><td>48.4</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>101</td>--><td class='tdleft'>Dunlop M-Fil Tour 16</td><td>Nylon</td><td>159.4</td><td>23.3</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>102</td>--><td class='tdleft'>Dunlop Hexy Fiber 17</td><td>Nylon</td><td>144.0</td><td>24.8</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>103</td>--><td class='tdleft'>Dunlop Synthetic Gut 16</td><td>Nylon</td><td>172.6</td><td>22.9</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>104</td>--><td class='tdleft'>Dunlop DNA 17 (1.22)</td><td>Nylon</td><td>145.2</td><td>28.2</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>105</td>--><td class='tdleft'>Dunlop Comfort Poly 17</td><td>Polyester</td><td>236.6</td><td>42.1</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>106</td>--><td class='tdleft'>Dunlop S-Gut 18 (1.19)</td><td>Nylon</td><td>156.0</td><td>16.2</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>107</td>--><td class='tdleft'>Dunlop Pearl 16 (1.30)</td><td>Nylon</td><td>138.3</td><td>17.6</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>108</td>--><td class='tdleft'>Dunlop Explosive Tour 16 (1.30)</td><td>Polyester</td><td>200.6</td><td>48.2</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>109</td>--><td class='tdleft'>Dunlop Ice 17 (1.25)</td><td>Polyester</td><td>192.6</td><td>39.8</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>110</td>--><td class='tdleft'>Dunlop Silk 17</td><td>Nylon</td><td>130.9</td><td>30.8</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>111</td>--><td class='tdleft'>Dunlop Silk 16 (1.30)</td><td>Nylon</td><td>147.4</td><td>25.9</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>112</td>--><td class='tdleft'>Dunlop Comfort Synthetic 17</td><td>Nylon</td><td>184.0</td><td>19.4</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>113</td>--><td class='tdleft'>Dunlop DNA 16 (1.30)</td><td>Nylon</td><td>146.9</td><td>25.1</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>114</td>--><td class='tdleft'>Dunlop Explosive Poly Max 16</td><td>Nylon/Polyester</td><td>158.3</td><td>23.5</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>115</td>--><td class='tdleft'>Dunlop X-Life Synthetic 15L</td><td>Nylon</td><td>177.2</td><td>22.1</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>116</td>--><td class='tdleft'>Dunlop Iconic All 17 (1.25)</td><td>Nylon</td><td>139.4</td><td>19.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>117</td>--><td class='tdleft'>Dunlop Pearl 17 (1.25)</td><td>Nylon</td><td>145.2</td><td>18.1</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>118</td>--><td class='tdleft'>Dunlop Tour Performance 16</td><td>Nylon</td><td>160.0</td><td>22.3</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>119</td>--><td class='tdleft'>Forten Sweet 16</td><td>Nylon</td><td>188.6</td><td>22.6</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>120</td>--><td class='tdleft'>Gamma Moto 16</td><td>Polyester</td><td>226.9</td><td>30.8</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>121</td>--><td class='tdleft'>Gamma Synthetic Gut 16</td><td>Nylon</td><td>185.7</td><td>23.2</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>122</td>--><td class='tdleft'>Gamma TNT2 16</td><td>Nylon</td><td>170.9</td><td>21.6</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>123</td>--><td class='tdleft'>Gamma Zo Verve 16 (1.32)</td><td>Polyester</td><td>229.2</td><td>22.2</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>124</td>--><td class='tdleft'>Gamma TNT2 Tour 16 (1.32)</td><td>Nylon</td><td>157.2</td><td>19.1</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>125</td>--><td class='tdleft'>Gamma Ocho TNT 16 (1.30)</td><td>Nylon</td><td>186.9</td><td>13.2</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>126</td>--><td class='tdleft'>Gamma IO 17 (1.23)</td><td>Polyester</td><td>197.7</td><td>29.8</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>127</td>--><td class='tdleft'>Gamma TNT2 17 (1.27)</td><td>Nylon</td><td>157.7</td><td>13.2</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>128</td>--><td class='tdleft'>Gamma Ocho 16 (1.30)</td><td>Polyester</td><td>242.9</td><td>23.3</td><td>6.9</td>
+				</tr>
+				<tr>
+				<!--<td>129</td>--><td class='tdleft'>Gamma IO Soft 15L (1.40)</td><td>Polyester</td><td>219.5</td><td>32.9</td><td>6.3</td>
+				</tr>
+				<tr>
+				<!--<td>130</td>--><td class='tdleft'>Gamma Professional 18 (1.22)</td><td>Nylon</td><td>124.0</td><td>22.0</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>131</td>--><td class='tdleft'>Gamma Zo Tour 17 (1.25)</td><td>Polyester</td><td>204.0</td><td>50.3</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>132</td>--><td class='tdleft'>Gamma Marathon DPC 15 (1.40)</td><td>Nylon</td><td>180.0</td><td>14.8</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>133</td>--><td class='tdleft'>Gamma Zo Power 16L</td><td>Polyester</td><td>193.2</td><td>56.7</td><td>2.9</td>
+				</tr>
+				<tr>
+				<!--<td>134</td>--><td class='tdleft'>Gamma Moto Soft 16 (1.29)</td><td>Polyester</td><td>200.0</td><td>31.4</td><td>6.4</td>
+				</tr>
+				<tr>
+				<!--<td>135</td>--><td class='tdleft'>Gamma Synthtic Gut 15L W/wearguard (1.38)</td><td>Nylon</td><td>167.4</td><td>17.0</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>136</td>--><td class='tdleft'>Gamma Professional 16</td><td>Nylon/Zyex</td><td>149.7</td><td>25.1</td><td>2.4</td>
+				</tr>
+				<tr>
+				<!--<td>137</td>--><td class='tdleft'>Gamma Zo Verve 17</td><td>Polyester</td><td>230.9</td><td>25.3</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>138</td>--><td class='tdleft'>Gamma Zo Ice 16</td><td>Polyester</td><td>223.5</td><td>37.8</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>139</td>--><td class='tdleft'>Gamma Poly Z 16</td><td>Polyester</td><td>179.5</td><td>51.8</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>140</td>--><td class='tdleft'>Gamma TNT2 Rx 16</td><td>Nylon</td><td>173.2</td><td>23.4</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>141</td>--><td class='tdleft'>Gamma Revelation 17 (1.27)</td><td>Nylon</td><td>145.7</td><td>19.4</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>142</td>--><td class='tdleft'>Gamma Solace 16 (1.32)</td><td>Nylon</td><td>146.9</td><td>21.7</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>143</td>--><td class='tdleft'>Gamma TNT2 Touch 16</td><td>Nylon</td><td>153.7</td><td>26.1</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>144</td>--><td class='tdleft'>Gamma Revelation 16</td><td>Nylon/Zyex</td><td>162.3</td><td>25.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>145</td>--><td class='tdleft'>Gamma Asterisk Tour 16</td><td>Nylon/Zyex</td><td>162.3</td><td>24.6</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>146</td>--><td class='tdleft'>Gamma Zo Dart 17 (1.25)</td><td>Polyester</td><td>206.9</td><td>26.7</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>147</td>--><td class='tdleft'>Gamma TNT2 Tour 17 (1.27)</td><td>Nylon</td><td>155.4</td><td>19.7</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>148</td>--><td class='tdleft'>Gamma Asterisk 16</td><td>Nylon</td><td>156.6</td><td>21.2</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>149</td>--><td class='tdleft'>Gamma IO 18 (1.18)</td><td>Polyester</td><td>188.6</td><td>30.4</td><td>6.4</td>
+				</tr>
+				<tr>
+				<!--<td>150</td>--><td class='tdleft'>Gamma TNT2 18 (1.17)</td><td>Nylon</td><td>165.7</td><td>16.2</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>151</td>--><td class='tdleft'>Gamma Ocho 17 (1.25)</td><td>Polyester</td><td>231.5</td><td>21.0</td><td>7.1</td>
+				</tr>
+				<tr>
+				<!--<td>152</td>--><td class='tdleft'>Gamma IO Soft 16 (1.28)</td><td>Polyester</td><td>200.0</td><td>33.7</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>153</td>--><td class='tdleft'>Gamma Live Wire XP 17 (1.27)</td><td>Nylon</td><td>150.3</td><td>18.7</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>154</td>--><td class='tdleft'>Gamma Ocho XP 17 (1.27)</td><td>Nylon</td><td>147.4</td><td>20.9</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>155</td>--><td class='tdleft'>Gamma Zo Tour Rough 16</td><td>Polyester</td><td>186.9</td><td>48.9</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>156</td>--><td class='tdleft'>Gamma Moto Soft 17 (1.24)</td><td>Polyester</td><td>184.0</td><td>34.8</td><td>7.0</td>
+				</tr>
+				<tr>
+				<!--<td>157</td>--><td class='tdleft'>Gamma Synthetic Gut 17 W/wearguard (1.22)</td><td>Nylon</td><td>160.6</td><td>14.4</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>158</td>--><td class='tdleft'>Gamma Zo Black Ice 17 (1.23)</td><td>Polyester</td><td>211.5</td><td>41.2</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>159</td>--><td class='tdleft'>Gamma Solace 17 (1.27)</td><td>Nylon</td><td>148.0</td><td>17.6</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>160</td>--><td class='tdleft'>Gamma Professional 17</td><td>Nylon</td><td>144.6</td><td>23.3</td><td>2.8</td>
+				</tr>
+				<tr>
+				<!--<td>161</td>--><td class='tdleft'>Gamma Asterisk Spin 16</td><td>Nylon</td><td>149.7</td><td>24.5</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>162</td>--><td class='tdleft'>Gamma Zo Magic 16</td><td>Polyester</td><td>248.0</td><td>33.7</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>163</td>--><td class='tdleft'>Gamma TNT2 Pro Plus 16</td><td>Nylon</td><td>158.3</td><td>25.9</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>164</td>--><td class='tdleft'>Gamma Synthetic Gut 17 (1.25)</td><td>Nylon</td><td>160.6</td><td>12.3</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>165</td>--><td class='tdleft'>Gamma ESP 16</td><td>Nylon</td><td>157.7</td><td>27.1</td><td>2.6</td>
+				</tr>
+				<tr>
+				<!--<td>166</td>--><td class='tdleft'>Gamma Zo Tour 16</td><td></td><td>214.9</td><td>52.3</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>167</td>--><td class='tdleft'>Gamma FXT 17 (1.24)</td><td>Nylon</td><td>154.3</td><td>12.0</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>168</td>--><td class='tdleft'>Gamma TNT2 Pro Plus 17L (1.24)</td><td>Nylon</td><td>149.2</td><td>17.7</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>169</td>--><td class='tdleft'>Gamma Prodigy 16</td><td>Nylon</td><td>164.6</td><td>21.3</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>170</td>--><td class='tdleft'>Gamma Live Wire XP 16</td><td>Nylon/Zyex</td><td>156.6</td><td>24.7</td><td>2.6</td>
+				</tr>
+				<tr>
+				<!--<td>171</td>--><td class='tdleft'>Gamma RZR Rx 17</td><td>Polyester</td><td>185.2</td><td>28.7</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>172</td>--><td class='tdleft'>Gamma TNT2 15L (1.40)</td><td>Nylon</td><td>180.6</td><td>15.6</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>173</td>--><td class='tdleft'>Gamma Ocho XP 16 (1.32)</td><td>Nylon</td><td>148.6</td><td>19.4</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>174</td>--><td class='tdleft'>Gamma IO Soft 17 (1.23)</td><td>Polyester</td><td>192.6</td><td>33.9</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>175</td>--><td class='tdleft'>Gamma TNT2 Rx 17 (1.25)</td><td>Nylon</td><td>148.0</td><td>15.5</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>176</td>--><td class='tdleft'>Gamma Jet 16L (1.28)</td><td>Polyester</td><td>197.7</td><td>37.6</td><td>6.7</td>
+				</tr>
+				<tr>
+				<!--<td>177</td>--><td class='tdleft'>Gamma Ocho TNT 17 (1.25)</td><td>Nylon</td><td>186.3</td><td>10.7</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>178</td>--><td class='tdleft'>Gamma Monoblast 16</td><td>Polyester</td><td>220.6</td><td>42.5</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>179</td>--><td class='tdleft'>Gamma WearGuard Synthetic Gut 16</td><td>Nylon</td><td>165.2</td><td>22.0</td><td>2.8</td>
+				</tr>
+				<tr>
+				<!--<td>180</td>--><td class='tdleft'>Gamma Moto 17 (1.24)</td><td>Polyester</td><td>201.7</td><td>25.7</td><td>6.3</td>
+				</tr>
+				<tr>
+				<!--<td>181</td>--><td class='tdleft'>Gamma Glide Cross String 16</td><td>Nylon</td><td>133.2</td><td>22.7</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>182</td>--><td class='tdleft'>Gamma Live Wire 17 (1.27)</td><td>Nylon</td><td>147.4</td><td>18.1</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>183</td>--><td class='tdleft'>Gamma Zo Black Ice 18 (1.18)</td><td>Polyester</td><td>199.5</td><td>39.6</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>184</td>--><td class='tdleft'>Gamma Marathon DPC 16 (1.32)</td><td>Nylon</td><td>170.9</td><td>13.1</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>185</td>--><td class='tdleft'>Gamma Zo Twist 16</td><td>Polyester</td><td>190.3</td><td>46.3</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>186</td>--><td class='tdleft'>Gamma Professional Spin 16</td><td>Nylon/Zyex</td><td>165.2</td><td>23.7</td><td>2.7</td>
+				</tr>
+				<tr>
+				<!--<td>187</td>--><td class='tdleft'>Gamma Synthetic Gut 18 (1.18)</td><td>Nylon</td><td>164.6</td><td>15.2</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>188</td>--><td class='tdleft'>Gamma RZR Rx 16</td><td>Polyester</td><td>196.0</td><td>27.3</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>189</td>--><td class='tdleft'>Gamma Live Wire 16</td><td>Nylon/Zyex</td><td>158.9</td><td>29.7</td><td>2.6</td>
+				</tr>
+				<tr>
+				<!--<td>190</td>--><td class='tdleft'>Gamma FXT 16 (1.30)</td><td>Nylon</td><td>157.2</td><td>15.0</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>191</td>--><td class='tdleft'>Gamma TNT2 Touch 17 (1.27)</td><td>Nylon</td><td>132.0</td><td>28.2</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>192</td>--><td class='tdleft'>Genesis Black Magic 16 (1.29)</td><td>Polyester</td><td>207.5</td><td>36.1</td><td>6.2</td>
+				</tr>
+				<tr>
+				<!--<td>193</td>--><td class='tdleft'>Gosen AK Pro CX 17 (1.24)</td><td>Nylon</td><td>156.6</td><td>14.7</td><td>6.2</td>
+				</tr>
+				<tr>
+				<!--<td>194</td>--><td class='tdleft'>Gosen OG-Sheep Micro 16</td><td>Nylon</td><td>183.5</td><td>21.3</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>195</td>--><td class='tdleft'>Gosen Polylon SP 17 (1.24)</td><td>Polyester</td><td>174.9</td><td>52.2</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>196</td>--><td class='tdleft'>Gosen Compositemaster II 16</td><td>Nylon</td><td>150.9</td><td>23.5</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>197</td>--><td class='tdleft'>Gosen Powermaster I 16</td><td>Nylon</td><td>162.9</td><td>22.4</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>198</td>--><td class='tdleft'>Gosen G-Tour 16 (1.30)</td><td>Polyester</td><td>184.0</td><td>31.1</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>199</td>--><td class='tdleft'>Gosen AK Pro Spin 15L (1.38)</td><td>Nylon</td><td>168.6</td><td>11.7</td><td>6.0</td>
+				</tr>
+				<tr>
+				<!--<td>200</td>--><td class='tdleft'>Gosen Poly Professional 17 (1.24)</td><td>Polyester</td><td>169.2</td><td>44.6</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>201</td>--><td class='tdleft'>Gosen AK Pro 17</td><td>Nylon</td><td>162.3</td><td>20.7</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>202</td>--><td class='tdleft'>Gosen Polylon Premium 16 (1.32)</td><td>Polyester</td><td>217.7</td><td>31.0</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>203</td>--><td class='tdleft'>Gosen Polylon Comfort 16</td><td>Polyester</td><td>189.2</td><td>54.1</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>204</td>--><td class='tdleft'>Gosen Polymaster II 16</td><td>Polyester</td><td>172.0</td><td>53.0</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>205</td>--><td class='tdleft'>Gosen OG Sheep Micro Super 16L</td><td>Nylon</td><td>164.0</td><td>21.4</td><td>2.7</td>
+				</tr>
+				<tr>
+				<!--<td>206</td>--><td class='tdleft'>Gosen AK Pro CX 16 (1.30)</td><td>Nylon</td><td>158.3</td><td>14.1</td><td>6.5</td>
+				</tr>
+				<tr>
+				<!--<td>207</td>--><td class='tdleft'>Gosen TecGut Remplir 16</td><td>Nylon/Polyurethane</td><td>150.9</td><td>31.1</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>208</td>--><td class='tdleft'>Gosen Polylon PolyBreak 17 (1.24)</td><td>Polyester</td><td>195.5</td><td>48.9</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>209</td>--><td class='tdleft'>Gosen A.K. Control 16</td><td>Nylon</td><td>156.6</td><td>22.4</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>210</td>--><td class='tdleft'>Gosen Tecflex 16 (1.30)</td><td>Nylon</td><td>150.9</td><td>19.5</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>211</td>--><td class='tdleft'>Gosen Powermaster II 16</td><td>Nylon</td><td>157.7</td><td>22.4</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>212</td>--><td class='tdleft'>Gosen Sidewinder 16 (1.31)</td><td>Polyester</td><td>163.4</td><td>46.7</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>213</td>--><td class='tdleft'>Gosen Polylon Premium 16L (1.27)</td><td>Polyester</td><td>201.2</td><td>32.7</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>214</td>--><td class='tdleft'>Gosen Polylon 16</td><td>Polyester</td><td>206.9</td><td>50.9</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>215</td>--><td class='tdleft'>Gosen Polylon 17 (1.24)</td><td>Polyester</td><td>208.0</td><td>48.8</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>216</td>--><td class='tdleft'>Gosen OG Sheep Micro 17</td><td>Nylon</td><td>163.4</td><td>23.5</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>217</td>--><td class='tdleft'>Gosen Multi CX 16 (1.30)</td><td>Nylon</td><td>154.9</td><td>17.7</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>218</td>--><td class='tdleft'>Gosen Sidewinder 17</td><td>Polyester</td><td>159.4</td><td>46.7</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>219</td>--><td class='tdleft'>Gosen Polylon PolyBreak 18 (1.20)</td><td>Polyester</td><td>165.2</td><td>53.3</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>220</td>--><td class='tdleft'>Gosen Nanosilver 17</td><td>Nylon</td><td>156.6</td><td>21.7</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>221</td>--><td class='tdleft'>Gosen AK Control 17 (1.24)</td><td>Nylon</td><td>148.6</td><td>17.3</td><td>7.6</td>
+				</tr>
+				<tr>
+				<!--<td>222</td>--><td class='tdleft'>Gosen Polylon SP 16 (1.30)</td><td>Polyester</td><td>184.6</td><td>52.5</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>223</td>--><td class='tdleft'>Gosen Compositemaster I 16</td><td>Nylon</td><td>165.2</td><td>21.3</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>224</td>--><td class='tdleft'>Gosen AK Pro 16</td><td>Nylon</td><td>173.7</td><td>21.9</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>225</td>--><td class='tdleft'>Gosen Lumina Spin 16L (1.26)</td><td>Polyester</td><td>178.3</td><td>50.0</td><td>6.6</td>
+				</tr>
+				<tr>
+				<!--<td>226</td>--><td class='tdleft'>Gosen Poly Professional 16 (1.29)</td><td>Polyester</td><td>186.3</td><td>44.3</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>227</td>--><td class='tdleft'>Gosen OG Sheep Micro 18</td><td>Nylon</td><td>159.4</td><td>21.4</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>228</td>--><td class='tdleft'>Gosen Multi CX 17 (1.24)</td><td>Nylon</td><td>149.7</td><td>18.1</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>229</td>--><td class='tdleft'>Gosen Nanocubic 16</td><td>Nylon</td><td>183.5</td><td>20.7</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>230</td>--><td class='tdleft'>Gosen Polymaster I 16</td><td>Polyester</td><td>186.9</td><td>51.8</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>231</td>--><td class='tdleft'>Gosen Nanoblend 17</td><td>Nylon</td><td>132.0</td><td>27.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>232</td>--><td class='tdleft'>Head Lynx Tour 16 (1.30)</td><td>Polyester</td><td>228.6</td><td>30.5</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>233</td>--><td class='tdleft'>Head Hawk 18 (1.20)</td><td>Polyester</td><td>194.3</td><td>28.9</td><td>6.3</td>
+				</tr>
+				<tr>
+				<!--<td>234</td>--><td class='tdleft'>Head Lynx 16 (1.30)</td><td>Polyester</td><td>185.7</td><td>45.6</td><td>7.0</td>
+				</tr>
+				<tr>
+				<!--<td>235</td>--><td class='tdleft'>Head Synthetic Gut 16</td><td>Nylon</td><td>177.2</td><td>23.6</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>236</td>--><td class='tdleft'>Head Reflex MLT 17 (1.25)</td><td>Nylon</td><td>141.2</td><td>19.4</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>237</td>--><td class='tdleft'>Head FXP Power 16</td><td>Nylon</td><td>194.3</td><td>25.6</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>238</td>--><td class='tdleft'>Head Fibergel Power 17</td><td>Nylon</td><td>161.2</td><td>24.5</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>239</td>--><td class='tdleft'>Head PerfectControl 16</td><td>Polyolefin</td><td>150.9</td><td>20.0</td><td>2.6</td>
+				</tr>
+				<tr>
+				<!--<td>240</td>--><td class='tdleft'>Head FXP 16</td><td>Nylon/Polyester</td><td>165.2</td><td>22.8</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>241</td>--><td class='tdleft'>Head ETS 17</td><td>Nylon</td><td>152.0</td><td>21.3</td><td>1.9</td>
+				</tr>
+				<tr>
+				<!--<td>242</td>--><td class='tdleft'>Head Lynx 18 (1.20)</td><td>Polyester</td><td>174.9</td><td>45.6</td><td>6.3</td>
+				</tr>
+				<tr>
+				<!--<td>243</td>--><td class='tdleft'>Head Sonic Pro 16</td><td>Polyester</td><td>160.6</td><td>57.0</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>244</td>--><td class='tdleft'>Head Reflex MLT 16 (1.30)</td><td>Nylon</td><td>159.4</td><td>24.0</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>245</td>--><td class='tdleft'>Head Hawk Touch 18 (1.20)</td><td>Polyester</td><td>196.0</td><td>31.9</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>246</td>--><td class='tdleft'>Head Synthetic Gut PPS 16</td><td>Nylon</td><td>169.7</td><td>23.3</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>247</td>--><td class='tdleft'>Head Rip Control 17 (1.25)</td><td>Nylon/Polyolefin</td><td>137.7</td><td>18.3</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>248</td>--><td class='tdleft'>Head RIP Control 16</td><td>Nylon/Polyolefin</td><td>156.6</td><td>22.2</td><td>2.6</td>
+				</tr>
+				<tr>
+				<!--<td>249</td>--><td class='tdleft'>Head Velocity MLT 17 (1.25)</td><td>Nylon</td><td>153.2</td><td>14.7</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>250</td>--><td class='tdleft'>Head FXP Power 17</td><td>Nylon</td><td>163.4</td><td>22.2</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>251</td>--><td class='tdleft'>Head Fibergel Spin 16</td><td>Nylon</td><td>168.6</td><td>25.0</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>252</td>--><td class='tdleft'>Head Lynx Touch 16g (1.30)</td><td>Polyester</td><td>221.7</td><td>31.3</td><td>6.2</td>
+				</tr>
+				<tr>
+				<!--<td>253</td>--><td class='tdleft'>Head Hawk 17 (1.25)</td><td>Polyester</td><td>204.6</td><td>32.9</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>254</td>--><td class='tdleft'>Head Sonic Pro 17</td><td>Polyester</td><td>164.6</td><td>54.9</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>255</td>--><td class='tdleft'>Head Hawk Rough 17</td><td>Polyester</td><td>201.2</td><td>23.9</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>256</td>--><td class='tdleft'>Head FXP Tour 16</td><td>Nylon/Polyester</td><td>116.6</td><td>22.8</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>257</td>--><td class='tdleft'>Head Ultra Tour 16</td><td>Polyester</td><td>201.7</td><td>45.1</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>258</td>--><td class='tdleft'>Head Lynx Tour 17 (1.25)</td><td>Polyester</td><td>217.7</td><td>24.6</td><td>7.1</td>
+				</tr>
+				<tr>
+				<!--<td>259</td>--><td class='tdleft'>Head Hawk Touch 19 (1.15)</td><td>Polyester</td><td>192.0</td><td>32.8</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>260</td>--><td class='tdleft'>Head Hawk 16 (1.30)</td><td>Polyester</td><td>230.3</td><td>28.5</td><td>6.4</td>
+				</tr>
+				<tr>
+				<!--<td>261</td>--><td class='tdleft'>Head Synthetic Gut PPS 17 (1.25)</td><td>Nylon</td><td>150.9</td><td>14.6</td><td>6.2</td>
+				</tr>
+				<tr>
+				<!--<td>262</td>--><td class='tdleft'>Head FXP 17</td><td>Nylon</td><td>173.2</td><td>20.5</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>263</td>--><td class='tdleft'>Head Fibergel Power 16</td><td>Nylon</td><td>153.2</td><td>32.8</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>264</td>--><td class='tdleft'>Head Ultratour 17</td><td>Polyester</td><td>207.5</td><td>44.9</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>265</td>--><td class='tdleft'>Head Sonic Pro Edge 16</td><td>Polyester</td><td>194.9</td><td>38.5</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>266</td>--><td class='tdleft'>Head RIP PerfectPower 16</td><td>Nylon/Polyolefin</td><td>156.6</td><td>23.1</td><td>2.3</td>
+				</tr>
+				<tr>
+				<!--<td>267</td>--><td class='tdleft'>Head ETS 16</td><td>Nylon</td><td>156.0</td><td>24.7</td><td>1.9</td>
+				</tr>
+				<tr>
+				<!--<td>268</td>--><td class='tdleft'>Head Lynx 17 (1.25)</td><td>Polyester</td><td>179.5</td><td>47.0</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>269</td>--><td class='tdleft'>IsoSpeed Energetic 17</td><td>Nylon/Polyolefin</td><td>156.6</td><td>34.3</td><td>1.9</td>
+				</tr>
+				<tr>
+				<!--<td>270</td>--><td class='tdleft'>IsoSpeed Black Fire 17</td><td>Polyester</td><td>204.6</td><td>39.3</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>271</td>--><td class='tdleft'>IsoSpeed Pyramid 16</td><td>Polyester</td><td>174.9</td><td>58.0</td><td>7.0</td>
+				</tr>
+				<tr>
+				<!--<td>272</td>--><td class='tdleft'>IsoSpeed Professional Classic 17</td><td>Polyolefin</td><td>133.7</td><td>28.9</td><td>1.6</td>
+				</tr>
+				<tr>
+				<!--<td>273</td>--><td class='tdleft'>IsoSpeed Axon Mono 16L</td><td>Polyester</td><td>199.5</td><td>34.4</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>274</td>--><td class='tdleft'>IsoSpeed Pulse 16</td><td>Polyester</td><td>164.6</td><td>56.9</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>275</td>--><td class='tdleft'>IsoSpeed V18 19 (1.12)</td><td>Polyester</td><td>180.0</td><td>40.4</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>276</td>--><td class='tdleft'>IsoSpeed Control 16</td><td>Nylon/Polyolefin</td><td>149.7</td><td>25.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>277</td>--><td class='tdleft'>IsoSpeed Axon Multi 16L</td><td>Nylon/Polyolefin</td><td>126.3</td><td>29.1</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>278</td>--><td class='tdleft'>IsoSpeed Pulse 17</td><td>Polyester</td><td>159.4</td><td>55.6</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>279</td>--><td class='tdleft'>IsoSpeed Cream 17 (1.28)</td><td>Polyester</td><td>177.7</td><td>28.1</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>280</td>--><td class='tdleft'>IsoSpeed Energetic Plus 16</td><td>Nylon/Polyester</td><td>155.4</td><td>22.4</td><td>2.4</td>
+				</tr>
+				<tr>
+				<!--<td>281</td>--><td class='tdleft'>IsoSpeed Control Classic 16</td><td>Polyolefin</td><td>136.0</td><td>32.1</td><td>2.3</td>
+				</tr>
+				<tr>
+				<!--<td>282</td>--><td class='tdleft'>Kirschbaum Touch Turbo 16L (1.275)</td><td>Polyester</td><td>196.0</td><td>48.5</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>283</td>--><td class='tdleft'>Kirschbaum Pro Line X 17 (1.25)</td><td>Polyester</td><td>218.3</td><td>37.0</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>284</td>--><td class='tdleft'>Kirschbaum Spiky Shark 17</td><td>Polyester</td><td>197.7</td><td>53.5</td><td>7.4</td>
+				</tr>
+				<tr>
+				<!--<td>285</td>--><td class='tdleft'>Kirschbaum Pro Line I 1.30</td><td>Polyester</td><td>224.6</td><td>47.8</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>286</td>--><td class='tdleft'>Kirschbaum Pro Line I 17 (1.25)</td><td>Polyester</td><td>204.6</td><td>50.8</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>287</td>--><td class='tdleft'>Kirschbaum Pro Line II 17 (1.25)</td><td>Polyester</td><td>201.2</td><td>44.9</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>288</td>--><td class='tdleft'>Kirschbaum Black Shark 16 (1.30)</td><td>Polyester</td><td>223.5</td><td>41.2</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>289</td>--><td class='tdleft'>Kirschbaum Pro Line Evolution 17 (1.25)</td><td>Polyester</td><td>208.0</td><td>28.9</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>290</td>--><td class='tdleft'>Kirschbaum Long Life 15</td><td>Polyester</td><td>231.5</td><td>55.4</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>291</td>--><td class='tdleft'>Kirschbaum Max Power Rough 16 (1.30)</td><td>Polyester</td><td>230.9</td><td>28.3</td><td>6.0</td>
+				</tr>
+				<tr>
+				<!--<td>292</td>--><td class='tdleft'>Kirschbaum Super Smash 17 (1.25)</td><td>Polyester</td><td>210.9</td><td>48.0</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>293</td>--><td class='tdleft'>Kirschbaum Max Power 16 (1.30)</td><td>Polyester</td><td>233.2</td><td>20.9</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>294</td>--><td class='tdleft'>Kirschbaum Super Smash 16/1.30</td><td>Polyester</td><td>221.7</td><td>50.7</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>295</td>--><td class='tdleft'>Kirschbaum Touch Multifibre 17 (1.25)</td><td>Nylon</td><td>165.7</td><td>21.8</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>296</td>--><td class='tdleft'>Kirschbaum Touch Multifibre 16</td><td>Nylon</td><td>161.7</td><td>23.3</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>297</td>--><td class='tdleft'>Kirschbaum Touch Turbo 1.30</td><td>Polyester</td><td>218.3</td><td>45.7</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>298</td>--><td class='tdleft'>Kirschbaum Touch Turbo 17 (1.25)</td><td>Polyester</td><td>203.5</td><td>45.3</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>299</td>--><td class='tdleft'>Kirschbaum Max Power 17 (1.25)</td><td>Polyester</td><td>240.6</td><td>23.5</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>300</td>--><td class='tdleft'>Kirschbaum Helix 17</td><td>Polyester</td><td>208.6</td><td>44.2</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>301</td>--><td class='tdleft'>Kirschbaum Pro Line I 17L (1.20)</td><td>Polyester</td><td>194.9</td><td>52.2</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>302</td>--><td class='tdleft'>Kirschbaum Xplosive Speed 1.30</td><td>Polyester</td><td>193.2</td><td>43.3</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>303</td>--><td class='tdleft'>Kirschbaum Pro Line II 17L (1.20)</td><td>Polyester</td><td>193.2</td><td>46.0</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>304</td>--><td class='tdleft'>Kirschbaum Black Shark 17 (1.25)</td><td>Polyester</td><td>216.6</td><td>38.4</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>305</td>--><td class='tdleft'>Kirschbaum Super Smash Spiky 1.20</td><td>Polyester</td><td>205.2</td><td>52.7</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>306</td>--><td class='tdleft'>Kirschbaum Super Smash Spiky 17 (1.25)</td><td>Polyester</td><td>214.3</td><td>51.0</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>307</td>--><td class='tdleft'>Kirschbaum Max Power Rough 18 (1.20)</td><td>Polyester</td><td>195.5</td><td>27.8</td><td>6.8</td>
+				</tr>
+				<tr>
+				<!--<td>308</td>--><td class='tdleft'>Kirschbaum Helix 16</td><td>Polyester</td><td>204.6</td><td>55.3</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>309</td>--><td class='tdleft'>Kirschbaum Pro Line X 16 (1.30)</td><td>Polyester</td><td>240.0</td><td>27.2</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>310</td>--><td class='tdleft'>Kirschbaum Super Smash Spiky 16/1.30</td><td>Polyester</td><td>216.6</td><td>54.6</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>311</td>--><td class='tdleft'>Kirschbaum Competition 17L (1.20)</td><td>Polyester</td><td>190.3</td><td>45.0</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>312</td>--><td class='tdleft'>Kirschbaum Flash 16 (1.25)</td><td>Polyester</td><td>192.6</td><td>36.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>313</td>--><td class='tdleft'>Kirschbaum Competition 16/1.30</td><td>Polyester</td><td>210.3</td><td>47.5</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>314</td>--><td class='tdleft'>Kirschbaum P2 17 (1.25)</td><td>Polyester</td><td>235.5</td><td>33.9</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>315</td>--><td class='tdleft'>Kirschbaum Pro Line I 18L (1.15)</td><td>Polyester</td><td>189.2</td><td>50.4</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>316</td>--><td class='tdleft'>Kirschbaum Pro Line II 1.30</td><td>Polyester</td><td>209.7</td><td>47.6</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>317</td>--><td class='tdleft'>Kirschbaum Pro Line II 18 (1.15)</td><td>Polyester</td><td>182.9</td><td>46.4</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>318</td>--><td class='tdleft'>Kirschbaum Xplosive Speed 1.25</td><td>Polyester</td><td>185.7</td><td>41.4</td><td>7.1</td>
+				</tr>
+				<tr>
+				<!--<td>319</td>--><td class='tdleft'>Kirschbaum Max Power Rough 17 (1.25)</td><td>Polyester</td><td>223.5</td><td>26.4</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>320</td>--><td class='tdleft'>Kirschbaum Spiky Shark 16</td><td>Polyester</td><td>216.0</td><td>47.4</td><td>7.5</td>
+				</tr>
+				<tr>
+				<!--<td>321</td>--><td class='tdleft'>Kirschbaum Competition 17 (1.25)</td><td>Polyester</td><td>210.3</td><td>47.5</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>322</td>--><td class='tdleft'>Kirschbaum Max Power 18 (1.20)</td><td>Polyester</td><td>226.3</td><td>21.8</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>323</td>--><td class='tdleft'>Kirschbaum P2 16/1.30</td><td>Polyester</td><td>218.9</td><td>38.3</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>324</td>--><td class='tdleft'>Kirschbaum P2 17L (1.20)</td><td>Polyester</td><td>197.2</td><td>41.6</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>325</td>--><td class='tdleft'>Klip Hardcore 16/1.30</td><td>Polyester</td><td>193.2</td><td>49.8</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>326</td>--><td class='tdleft'>Klip Venom 16/1.30</td><td>Nylon</td><td>163.4</td><td>20.8</td><td>2.3</td>
+				</tr>
+				<tr>
+				<!--<td>327</td>--><td class='tdleft'>Klip K-Boom 16/1.30</td><td>Polyester</td><td>237.2</td><td>34.0</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>328</td>--><td class='tdleft'>Klip Legend 17 (1.25)</td><td>Gut</td><td>89.7</td><td>12.3</td><td>2.0</td>
+				</tr>
+				<tr>
+				<!--<td>329</td>--><td class='tdleft'>Klip Excellerator 16/1.30</td><td>Nylon</td><td>160.6</td><td>20.1</td><td>2.7</td>
+				</tr>
+				<tr>
+				<!--<td>330</td>--><td class='tdleft'>Klip Legend 16 Uncoated</td><td>Gut</td><td>101.2</td><td>15.0</td><td>1.2</td>
+				</tr>
+				<tr>
+				<!--<td>331</td>--><td class='tdleft'>Klip Kicker 16</td><td>Nylon</td><td>178.9</td><td>19.1</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>332</td>--><td class='tdleft'>Klip K-Boom 18 (1.20)</td><td>Polyester</td><td>190.3</td><td>31.5</td><td>6.2</td>
+				</tr>
+				<tr>
+				<!--<td>333</td>--><td class='tdleft'>Klip Scorcher 16/1.30</td><td>Nylon</td><td>167.4</td><td>24.5</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>334</td>--><td class='tdleft'>Klip Armour Pro 16/1.30</td><td>Gut</td><td>109.2</td><td>16.3</td><td>1.4</td>
+				</tr>
+				<tr>
+				<!--<td>335</td>--><td class='tdleft'>Klip Synthetic Gut 16</td><td>Nylon</td><td>165.7</td><td>24.8</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>336</td>--><td class='tdleft'>Klip Scorcher 17 (1.27)</td><td>Nylon</td><td>158.9</td><td>16.2</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>337</td>--><td class='tdleft'>L-Tec Premium 5S 16L (1.25)</td><td>Polyester</td><td>210.3</td><td>36.8</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>338</td>--><td class='tdleft'>L-Tec Premium Pro OS 16L</td><td>Polyester</td><td>253.7</td><td>26.4</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>339</td>--><td class='tdleft'>L-Tec Premium OS 17 (1.23)</td><td>Polyester</td><td>224.0</td><td>28.8</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>340</td>--><td class='tdleft'>L-Tec Premium 4S 16L (1.25)</td><td>Polyester</td><td>233.7</td><td>35.3</td><td>6.7</td>
+				</tr>
+				<tr>
+				<!--<td>341</td>--><td class='tdleft'>L-Tec Premium 3S 16L (1.25)</td><td>Polyester</td><td>220.0</td><td>35.6</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>342</td>--><td class='tdleft'>LaserFibre Supreme 2.0 17 (1.25)</td><td>Nylon/Polyurethane</td><td>142.9</td><td>19.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>343</td>--><td class='tdleft'>LaserFibre JB Tour 100 17g (1.25)</td><td>Polyester</td><td>210.9</td><td>44.3</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>344</td>--><td class='tdleft'>LaserFibre Supernatural Gut Pro Stock 16</td><td>Nylon</td><td>162.3</td><td>27.1</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>345</td>--><td class='tdleft'>LaserFibre 1200 16 (1.30)</td><td>Nylon</td><td>137.7</td><td>18.4</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>346</td>--><td class='tdleft'>LaserFibre Supreme 2.0 16 (1.30)</td><td>Nylon/Polyurethane</td><td>146.3</td><td>20.0</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>347</td>--><td class='tdleft'>LaserFibre Native Tour 17 (1.25)</td><td>Polyester</td><td>200.0</td><td>46.1</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>348</td>--><td class='tdleft'>LaserFibre Vorso 17 (1.23)</td><td>Polyester</td><td>177.7</td><td>42.2</td><td>6.2</td>
+				</tr>
+				<tr>
+				<!--<td>349</td>--><td class='tdleft'>LaserFibre Vorso 16 (1.28)</td><td>Polyester</td><td>180.6</td><td>51.5</td><td>6.4</td>
+				</tr>
+				<tr>
+				<!--<td>350</td>--><td class='tdleft'>Leopard Plus Control 16</td><td>Polyester</td><td>225.7</td><td>40.0</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>351</td>--><td class='tdleft'>Luxilon Big Banger ALU Power Spin 127/16</td><td>Polyester</td><td>213.7</td><td>45.0</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>352</td>--><td class='tdleft'>Luxilon Adrenaline Rough 16L/1.25</td><td>Polyester</td><td>202.9</td><td>44.8</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>353</td>--><td class='tdleft'>Luxilon Adrenaline 16</td><td>Polyester</td><td>212.6</td><td>45.3</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>354</td>--><td class='tdleft'>Luxilon Adrenaline 17/1.20</td><td>Polyester</td><td>208.0</td><td>41.8</td><td>2.9</td>
+				</tr>
+				<tr>
+				<!--<td>355</td>--><td class='tdleft'>Luxilon Alu Power Soft 1.25</td><td>Polyester</td><td>197.7</td><td>36.6</td><td>6.9</td>
+				</tr>
+				<tr>
+				<!--<td>356</td>--><td class='tdleft'>Luxilon Alu Power Vibe 16 (1.25)</td><td>Polyester</td><td>208.0</td><td>34.3</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>357</td>--><td class='tdleft'>Luxilon LXN Smart 16L (1.25)</td><td>Polyester</td><td>201.2</td><td>42.7</td><td>6.8</td>
+				</tr>
+				<tr>
+				<!--<td>358</td>--><td class='tdleft'>Luxilon Monotec Zolo 125/16</td><td>Polyester</td><td>213.2</td><td>48.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>359</td>--><td class='tdleft'>Luxilon ALU Power Feel 18/1.20</td><td>Polyester</td><td>186.9</td><td>42.9</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>360</td>--><td class='tdleft'>Luxilon Element Rough 16 (1.30)</td><td>Polyester</td><td>198.3</td><td>34.9</td><td>7.0</td>
+				</tr>
+				<tr>
+				<!--<td>361</td>--><td class='tdleft'>Luxilon ALU Power 125/16L</td><td>Polyester</td><td>209.2</td><td>46.6</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>362</td>--><td class='tdleft'>Luxilon Savage 16/1.27</td><td>Polyester</td><td>234.3</td><td>46.2</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>363</td>--><td class='tdleft'>Luxilon Big Banger Timo 18 (1.10)</td><td>Polyester</td><td>189.2</td><td>45.4</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>364</td>--><td class='tdleft'>Luxilon M2 Plus 130/16</td><td>Polyester</td><td>202.9</td><td>52.0</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>365</td>--><td class='tdleft'>Luxilon Adrenaline 16L/1.25</td><td>Polyester</td><td>202.9</td><td>44.3</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>366</td>--><td class='tdleft'>Luxilon Monotec Supersense 16L/1.25</td><td>Polyester</td><td>209.7</td><td>47.7</td><td>2.1</td>
+				</tr>
+				<tr>
+				<!--<td>367</td>--><td class='tdleft'>Luxilon 4G S 15</td><td>Polyester</td><td>314.3</td><td>23.5</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>368</td>--><td class='tdleft'>Luxilon Element 1.30</td><td>Polyester</td><td>191.5</td><td>44.3</td><td>6.6</td>
+				</tr>
+				<tr>
+				<!--<td>369</td>--><td class='tdleft'>Luxilon Big Banger TiMO 17L (1.17)</td><td>Polyester</td><td>204.0</td><td>45.9</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>370</td>--><td class='tdleft'>Luxilon Element 16L (1.25)</td><td>Polyester</td><td>208.0</td><td>33.6</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>371</td>--><td class='tdleft'>Luxilon LXN Smart 16 (1.30)</td><td>Polyester</td><td>208.6</td><td>45.9</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>372</td>--><td class='tdleft'>Luxilon Monotec Super Poly 1.25/16L</td><td>Polyester</td><td>233.2</td><td>44.1</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>373</td>--><td class='tdleft'>Luxilon Natural Gut 1.25</td><td>Gut</td><td>82.3</td><td>13.0</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>374</td>--><td class='tdleft'>Luxilon Big Banger Original 130/16</td><td>Polyester</td><td>213.2</td><td>51.4</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>375</td>--><td class='tdleft'>Luxilon Big Banger Ace 18 (1.12)</td><td>Polyester</td><td>203.5</td><td>46.1</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>376</td>--><td class='tdleft'>Luxilon M2 Pro 125/16</td><td>Polyester</td><td>181.7</td><td>53.0</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>377</td>--><td class='tdleft'>Luxilon 4G 16L (1.25)</td><td>Polyester</td><td>258.9</td><td>21.3</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>378</td>--><td class='tdleft'>Luxilon 4G 16 (1.30)</td><td>Polyester</td><td>286.9</td><td>23.5</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>379</td>--><td class='tdleft'>Luxilon 4G Soft 1.25</td><td>Polyester</td><td>217.2</td><td>25.4</td><td>6.7</td>
+				</tr>
+				<tr>
+				<!--<td>380</td>--><td class='tdleft'>Luxilon Big Banger Timo 17 (1.22)</td><td>Polyester</td><td>206.9</td><td>44.3</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>381</td>--><td class='tdleft'>Luxilon Big Banger XP 15L (1.38)</td><td>Polyester</td><td>236.6</td><td>48.0</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>382</td>--><td class='tdleft'>Luxilon Monotec Zolo 15L</td><td>Polyester</td><td>219.5</td><td>47.0</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>383</td>--><td class='tdleft'>Luxilon Big Banger XP 125/16L</td><td>Polyester</td><td>209.2</td><td>49.0</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>384</td>--><td class='tdleft'>Luxilon ALU Power Rough 16L (1.25)</td><td>Polyester</td><td>209.2</td><td>39.6</td><td>6.5</td>
+				</tr>
+				<tr>
+				<!--<td>385</td>--><td class='tdleft'>Luxilon Big Banger Rough 130/16</td><td>Polyester</td><td>212.6</td><td>52.0</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>386</td>--><td class='tdleft'>Luxilon 4G Rough 16L</td><td>Polyester</td><td>216.0</td><td>32.8</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>387</td>--><td class='tdleft'>Luxilon Big Banger ALU Power Fluoro 17</td><td>Polyester</td><td>206.9</td><td>44.8</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>388</td>--><td class='tdleft'>Mantis Comfort Synthetic 16</td><td>Nylon</td><td>149.2</td><td>24.4</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>389</td>--><td class='tdleft'>Mantis Comfort Poly 16</td><td>Polyester</td><td>224.6</td><td>40.2</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>390</td>--><td class='tdleft'>Mantis Power Poly 17</td><td>Polyester</td><td>203.5</td><td>43.0</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>391</td>--><td class='tdleft'>MSV Co.-Focus 16L</td><td>Polyester</td><td>184.6</td><td>49.7</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>392</td>--><td class='tdleft'>MSV Co-Focus 17L (1.18)</td><td>Polyester</td><td>185.7</td><td>31.0</td><td>7.2</td>
+				</tr>
+				<tr>
+				<!--<td>393</td>--><td class='tdleft'>MSV Hepta-Twist 17</td><td>Polyester</td><td>181.2</td><td>50.2</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>394</td>--><td class='tdleft'>MSV Focus Hex 17L (1.18)</td><td>Polyester</td><td>224.0</td><td>27.5</td><td>6.5</td>
+				</tr>
+				<tr>
+				<!--<td>395</td>--><td class='tdleft'>MSV Focus Hex Soft  17 (1.25)</td><td>Polyester</td><td>228.0</td><td>29.4</td><td>6.3</td>
+				</tr>
+				<tr>
+				<!--<td>396</td>--><td class='tdleft'>MSV Focus-Hex 16 (1.27)</td><td>Polyester</td><td>185.7</td><td>43.3</td><td>8.6</td>
+				</tr>
+				<tr>
+				<!--<td>397</td>--><td class='tdleft'>MSV Focus-Hex +38 16L (1.25)</td><td>Polyester</td><td>173.2</td><td>53.5</td><td>7.7</td>
+				</tr>
+				<tr>
+				<!--<td>398</td>--><td class='tdleft'>MSV Focus-Hex 16 (1.23)</td><td>Polyester</td><td>218.9</td><td>29.1</td><td>7.5</td>
+				</tr>
+				<tr>
+				<!--<td>399</td>--><td class='tdleft'>MSV Focus Evo 17</td><td>Polyester</td><td>206.9</td><td>46.1</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>400</td>--><td class='tdleft'>MSV Hepta-Twist 16</td><td>Polyester</td><td>188.6</td><td>51.3</td><td>0.0</td>
+				</tr>
+				<tr>
+				<!--<td>401</td>--><td class='tdleft'>MSV Focus Evo 16</td><td>Polyester</td><td>226.3</td><td>44.4</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>402</td>--><td class='tdleft'>MSV Focus Hex Soft 17L (1.20)</td><td>Polyester</td><td>194.3</td><td>25.8</td><td>7.3</td>
+				</tr>
+				<tr>
+				<!--<td>403</td>--><td class='tdleft'>One Strings Carbon NRG 16</td><td>Polyester</td><td>180.0</td><td>42.3</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>404</td>--><td class='tdleft'>One Strings Carbon Tour 17 (1.25)</td><td>Polyester</td><td>229.2</td><td>25.4</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>405</td>--><td class='tdleft'>Pacific Tough Gut 16L</td><td>Gut</td><td>96.0</td><td>15.8</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>406</td>--><td class='tdleft'>Pacific Prime Gut Orange Bull 16L (1.25)</td><td>Gut</td><td>76.0</td><td>9.6</td><td>2.3</td>
+				</tr>
+				<tr>
+				<!--<td>407</td>--><td class='tdleft'>Pacific Prime Natural Gut 16L</td><td>Gut</td><td>93.7</td><td>14.1</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>408</td>--><td class='tdleft'>Pacific Power Twist 16L</td><td>Nylon</td><td>158.3</td><td>22.7</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>409</td>--><td class='tdleft'>Pacific XCite 16 (1.30)</td><td>Polyester</td><td>220.0</td><td>26.7</td><td>6.6</td>
+				</tr>
+				<tr>
+				<!--<td>410</td>--><td class='tdleft'>Pacific Power Line 17</td><td>Nylon</td><td>174.3</td><td>22.3</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>411</td>--><td class='tdleft'>Pacific PMX 16L</td><td>Nylon</td><td>146.3</td><td>26.3</td><td>2.0</td>
+				</tr>
+				<tr>
+				<!--<td>412</td>--><td class='tdleft'>Pacific Poly Force 17</td><td>Polyester</td><td>233.2</td><td>36.7</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>413</td>--><td class='tdleft'>Pacific Prime Gut Orange Bull 16 (1.30)</td><td>Gut</td><td>74.3</td><td>11.7</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>414</td>--><td class='tdleft'>Pacific Tough Gut 16</td><td>Gut</td><td>106.9</td><td>20.5</td><td>1.8</td>
+				</tr>
+				<tr>
+				<!--<td>415</td>--><td class='tdleft'>Pacific ATP Poly Power Pro 16L</td><td>Polyester</td><td>194.3</td><td>51.1</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>416</td>--><td class='tdleft'>Pacific Poly Power Pro 16L (1.25)</td><td>Polyester</td><td>180.0</td><td>47.4</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>417</td>--><td class='tdleft'>Pacific Premium Power X 16L</td><td>Nylon</td><td>165.7</td><td>24.4</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>418</td>--><td class='tdleft'>Pacific Poly Power Pro 16 (1.30)</td><td>Polyester</td><td>194.9</td><td>43.7</td><td>8.3</td>
+				</tr>
+				<tr>
+				<!--<td>419</td>--><td class='tdleft'>Pacific Power Line 16L</td><td>Nylon</td><td>181.2</td><td>19.4</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>420</td>--><td class='tdleft'>Pacific X Force 18</td><td>Polyester</td><td>208.6</td><td>37.0</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>421</td>--><td class='tdleft'>Pacific Prime Natural Gut 16</td><td>Gut</td><td>85.2</td><td>13.5</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>422</td>--><td class='tdleft'>Pacific X Force 17</td><td>Polyester</td><td>225.7</td><td>36.2</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>423</td>--><td class='tdleft'>Pacific X Force 16L (1.29)</td><td>Polyester</td><td>219.5</td><td>25.0</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>424</td>--><td class='tdleft'>Pacific PMX 17</td><td>Nylon</td><td>140.0</td><td>26.6</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>425</td>--><td class='tdleft'>Pacific XCite 16L (1.25)</td><td>Polyester</td><td>206.3</td><td>27.8</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>426</td>--><td class='tdleft'>Pacific Poly Force 16L</td><td>Polyester</td><td>208.0</td><td>45.7</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>427</td>--><td class='tdleft'>Pacific Poly Force Xtreme 16L</td><td>Polyester</td><td>218.3</td><td>39.6</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>428</td>--><td class='tdleft'>Pacific Classic Natural Gut 16</td><td>Gut</td><td>100.0</td><td>15.4</td><td>2.8</td>
+				</tr>
+				<tr>
+				<!--<td>429</td>--><td class='tdleft'>Poly Star Energy 17 (1.20)</td><td>Polyester</td><td>165.2</td><td>63.6</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>430</td>--><td class='tdleft'>Poly Star Classic 17 (1.20)</td><td>Polyester</td><td>166.9</td><td>61.6</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>431</td>--><td class='tdleft'>Poly Star Turbo 16L (1.25)</td><td>Polyester</td><td>168.6</td><td>64.9</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>432</td>--><td class='tdleft'>Poly Star Strike 16L (1.25)</td><td>Polyester</td><td>184.0</td><td>51.4</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>433</td>--><td class='tdleft'>Poly Star Energy 16 (1.30)</td><td>Polyester</td><td>173.2</td><td>66.3</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>434</td>--><td class='tdleft'>Poly Star Classic 16 (1.30)</td><td>Polyester</td><td>185.7</td><td>55.8</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>435</td>--><td class='tdleft'>Poly Star Strike 16 (1.30)</td><td>Polyester</td><td>201.2</td><td>49.1</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>436</td>--><td class='tdleft'>Poly Star Energy 16L (1.25)</td><td>Polyester</td><td>169.7</td><td>68.0</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>437</td>--><td class='tdleft'>Poly Star Classic 16L (1.25)</td><td>Polyester</td><td>174.9</td><td>54.5</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>438</td>--><td class='tdleft'>Poly Star Turbo 16 (1.30)</td><td>Polyester</td><td>165.2</td><td>66.7</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>439</td>--><td class='tdleft'>Polyfibre Black Venom 16 (1.30)</td><td>Polyester</td><td>180.0</td><td>56.9</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>440</td>--><td class='tdleft'>Polyfibre TCS 17</td><td>Polyester</td><td>158.9</td><td>63.4</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>441</td>--><td class='tdleft'>Polyfibre Viper 16L/1.25</td><td>Polyester</td><td>170.3</td><td>60.1</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>442</td>--><td class='tdleft'>Polyfibre Poly Hightec 17</td><td>Polyester</td><td>157.7</td><td>63.0</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>443</td>--><td class='tdleft'>Polyfibre Hightec Premium 16/1.30</td><td>Polyester</td><td>174.3</td><td>57.6</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>444</td>--><td class='tdleft'>Polyfibre Hightec Premium 16L</td><td>Polyester</td><td>170.3</td><td>59.8</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>445</td>--><td class='tdleft'>Polyfibre TCS 18 (1.15)</td><td>Polyester</td><td>156.0</td><td>61.1</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>446</td>--><td class='tdleft'>Polyfibre Cobra 17/1.20</td><td>Polyester</td><td>154.3</td><td>63.7</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>447</td>--><td class='tdleft'>Polyfibre Poly Hightec 18</td><td>Polyester</td><td>150.3</td><td>61.0</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>448</td>--><td class='tdleft'>Polyfibre Poly Hightec 16/1.30</td><td>Polyester</td><td>173.2</td><td>57.8</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>449</td>--><td class='tdleft'>Polyfibre Hexablade 16L (1.25)</td><td>Polyester</td><td>172.0</td><td>62.9</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>450</td>--><td class='tdleft'>Polyfibre Viper 17/1.20</td><td>Polyester</td><td>157.7</td><td>64.3</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>451</td>--><td class='tdleft'>Polyfibre Black Venom Rough 16L (1.25)</td><td>Polyester</td><td>162.3</td><td>60.8</td><td>6.2</td>
+				</tr>
+				<tr>
+				<!--<td>452</td>--><td class='tdleft'>Polyfibre Hightec Premium 17</td><td>Polyester</td><td>157.7</td><td>61.9</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>453</td>--><td class='tdleft'>Polyfibre Black Venom 16L (1.25)</td><td>Polyester</td><td>170.3</td><td>60.4</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>454</td>--><td class='tdleft'>Polyfibre TCS Rapid 16L/1.25</td><td>Polyester</td><td>160.0</td><td>64.3</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>455</td>--><td class='tdleft'>Polyfibre TCS 16L</td><td>Polyester</td><td>166.9</td><td>62.1</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>456</td>--><td class='tdleft'>Polyfibre Hexablade 17L (1.18)</td><td>Polyester</td><td>168.6</td><td>63.8</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>457</td>--><td class='tdleft'>Polyfibre Poly Hightec 16L</td><td>Polyester</td><td>169.2</td><td>61.4</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>458</td>--><td class='tdleft'>Polyfibre TCS 16/1.30</td><td>Polyester</td><td>173.2</td><td>59.6</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>459</td>--><td class='tdleft'>Polyfibre Panthera 16 (1.30)</td><td>Polyester</td><td>212.6</td><td>28.7</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>460</td>--><td class='tdleft'>Prince Tournament Poly 17</td><td>Polyester</td><td>209.2</td><td>51.0</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>461</td>--><td class='tdleft'>Prince Tour XC 17L</td><td>Polyester</td><td>205.7</td><td>36.6</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>462</td>--><td class='tdleft'>Prince Premier Control 15L</td><td>Nylon</td><td>152.6</td><td>18.1</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>463</td>--><td class='tdleft'>Prince Tour 16</td><td>Polyester</td><td>214.9</td><td>53.0</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>464</td>--><td class='tdleft'>Prince Tour XS 1.35</td><td>Polyester</td><td>195.5</td><td>36.9</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>465</td>--><td class='tdleft'>Prince Vortex 16 (1.30)</td><td>Polyester</td><td>188.0</td><td>58.5</td><td>8.0</td>
+				</tr>
+				<tr>
+				<!--<td>466</td>--><td class='tdleft'>Prince Premier Control 16</td><td>Nylon</td><td>157.7</td><td>17.8</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>467</td>--><td class='tdleft'>Prince Synthetic Gut 17 Duraflex</td><td>Nylon</td><td>188.0</td><td>21.0</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>468</td>--><td class='tdleft'>Prince Tour 17</td><td>Polyester</td><td>198.9</td><td>55.6</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>469</td>--><td class='tdleft'>Prince Premier Power 16</td><td>Nylon</td><td>150.9</td><td>20.6</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>470</td>--><td class='tdleft'>Prince Premier W/Softflex 16</td><td>Nylon</td><td>142.3</td><td>25.2</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>471</td>--><td class='tdleft'>Prince Premier Touch 15L</td><td>Nylon</td><td>152.6</td><td>24.0</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>472</td>--><td class='tdleft'>Prince Poly Spin 3D</td><td>Polyester</td><td>178.9</td><td>60.2</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>473</td>--><td class='tdleft'>Prince Diablo Prism 17</td><td>Polyester</td><td>229.2</td><td>35.9</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>474</td>--><td class='tdleft'>Prince Synthetic Gut Multifilament 16</td><td>Nylon</td><td>172.6</td><td>20.1</td><td>2.7</td>
+				</tr>
+				<tr>
+				<!--<td>475</td>--><td class='tdleft'>Prince Tour XR 16 (1.30)</td><td>Polyester</td><td>214.9</td><td>40.9</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>476</td>--><td class='tdleft'>Prince Tournament Poly 16</td><td>Polyester</td><td>215.5</td><td>45.9</td><td>0.0</td>
+				</tr>
+				<tr>
+				<!--<td>477</td>--><td class='tdleft'>Prince Tour XC 16L</td><td>Polyester</td><td>205.7</td><td>36.7</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>478</td>--><td class='tdleft'>Prince Topspin Plus 16</td><td>Nylon</td><td>165.7</td><td>20.5</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>479</td>--><td class='tdleft'>Prince Tour XP 16</td><td>Polyester</td><td>198.3</td><td>36.5</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>480</td>--><td class='tdleft'>Prince Perfection 16 (1.30)</td><td>Nylon</td><td>162.9</td><td>15.6</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>481</td>--><td class='tdleft'>Prince Premier Control 17</td><td>Nylon</td><td>153.2</td><td>19.4</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>482</td>--><td class='tdleft'>Prince Premier W/ Softflex 17</td><td>Nylon</td><td>150.9</td><td>22.7</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>483</td>--><td class='tdleft'>Prince Synthetic Gut 18 Duraflex</td><td>Nylon</td><td>161.7</td><td>19.4</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>484</td>--><td class='tdleft'>Prince Premier Power 17</td><td>Nylon</td><td>145.2</td><td>19.7</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>485</td>--><td class='tdleft'>Prince Syn Gut Original 16</td><td>Nylon</td><td>191.5</td><td>20.7</td><td>2.9</td>
+				</tr>
+				<tr>
+				<!--<td>486</td>--><td class='tdleft'>Prince Tour XT 18</td><td>Polyester</td><td>184.0</td><td>38.2</td><td>6.4</td>
+				</tr>
+				<tr>
+				<!--<td>487</td>--><td class='tdleft'>Prince Twisted 16L</td><td>Polyester</td><td>230.3</td><td>43.5</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>488</td>--><td class='tdleft'>Prince Recoil 16</td><td>Nylon</td><td>173.7</td><td>23.8</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>489</td>--><td class='tdleft'>Prince Premier Touch 17</td><td>Nylon</td><td>136.6</td><td>24.9</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>490</td>--><td class='tdleft'>Prince Topspin W/ Duraflex 15L</td><td>Nylon</td><td>182.3</td><td>17.4</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>491</td>--><td class='tdleft'>Prince Tour XR 17 (1.25)</td><td>Polyester</td><td>203.5</td><td>42.2</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>492</td>--><td class='tdleft'>Prince Poly EXP 17</td><td>Polyester</td><td>217.7</td><td>43.7</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>493</td>--><td class='tdleft'>Prince Tour XC 15L</td><td>Polyester</td><td>208.6</td><td>45.4</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>494</td>--><td class='tdleft'>Prince Beast XP 16</td><td>Polyester</td><td>198.9</td><td>41.7</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>495</td>--><td class='tdleft'>Prince Synthetic Gut 16 Duraflex</td><td>Nylon</td><td>177.7</td><td>20.4</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>496</td>--><td class='tdleft'>Prince Tour XP 15L</td><td>Polyester</td><td>184.6</td><td>44.2</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>497</td>--><td class='tdleft'>Prince Premier Control 15</td><td>Nylon</td><td>154.3</td><td>18.9</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>498</td>--><td class='tdleft'>Prince Lightning XX 16</td><td>Nylon</td><td>180.6</td><td>19.3</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>499</td>--><td class='tdleft'>Prince Tour XR 15L (1.35)</td><td>Polyester</td><td>213.2</td><td>48.6</td><td>6.7</td>
+				</tr>
+				<tr>
+				<!--<td>500</td>--><td class='tdleft'>Prince Premier LT 18</td><td>Nylon</td><td>151.4</td><td>27.6</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>501</td>--><td class='tdleft'>Prince Premier Power 18</td><td>Nylon</td><td>142.9</td><td>20.5</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>502</td>--><td class='tdleft'>Prince Tournament Nylon 15L</td><td>Nylon</td><td>186.9</td><td>19.7</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>503</td>--><td class='tdleft'>Prince Tour XS 16</td><td>Polyester</td><td>196.6</td><td>36.2</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>504</td>--><td class='tdleft'>Prince Syn Gut Original 17</td><td>Nylon</td><td>180.6</td><td>16.5</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>505</td>--><td class='tdleft'>Prince Premier LT 17</td><td>Nylon</td><td>153.2</td><td>30.1</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>506</td>--><td class='tdleft'>Prince Premier Touch 16</td><td>Nylon</td><td>149.2</td><td>22.9</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>507</td>--><td class='tdleft'>Prince Lightning XX 17</td><td>Nylon</td><td>177.2</td><td>19.3</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>508</td>--><td class='tdleft'>Prince Tour XP 17 (1.25)</td><td>Polyester</td><td>189.2</td><td>36.1</td><td>6.7</td>
+				</tr>
+				<tr>
+				<!--<td>509</td>--><td class='tdleft'>Prince Synthetic Gut Multifilament 17</td><td>Nylon</td><td>161.2</td><td>22.6</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>510</td>--><td class='tdleft'>Prince Lightning Pro 16 (1.30)</td><td>Nylon</td><td>143.4</td><td>15.6</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>511</td>--><td class='tdleft'>RS RS Lyon 17L (1.20)</td><td>Polyester</td><td>182.9</td><td>36.7</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>512</td>--><td class='tdleft'>RS RS Lyon 17</td><td>Polyester</td><td>196.6</td><td>36.0</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>513</td>--><td class='tdleft'>Signum Pro Poly Megaforce 17 (1.19)</td><td>Polyester</td><td>213.2</td><td>36.3</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>514</td>--><td class='tdleft'>Signum Pro Poly Megaforce 16</td><td>Polyester</td><td>234.9</td><td>34.9</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>515</td>--><td class='tdleft'>Signum Pro Hyperion 16</td><td>Polyester</td><td>220.0</td><td>40.9</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>516</td>--><td class='tdleft'>Signum Pro Firestorm 16 (1.30)</td><td>Polyester</td><td>185.7</td><td>43.0</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>517</td>--><td class='tdleft'>Signum Pro Poly Plasma 17 (1.23)</td><td>Polyester</td><td>198.3</td><td>26.0</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>518</td>--><td class='tdleft'>Signum Pro Hyperion 17 (1.24)</td><td>Polyester</td><td>202.3</td><td>42.6</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>519</td>--><td class='tdleft'>Signum Pro Poly-Plasma 17L (1.18)</td><td>Polyester</td><td>197.2</td><td>40.3</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>520</td>--><td class='tdleft'>Signum Pro Poly-Plasma Pure 17 (1.23)</td><td>Polyester</td><td>199.5</td><td>43.0</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>521</td>--><td class='tdleft'>Signum Pro Firestorm 1.25</td><td>Polyester</td><td>197.7</td><td>46.4</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>522</td>--><td class='tdleft'>Signum Pro Poly Speed Spin 1.28</td><td>Polyester</td><td>246.3</td><td>40.9</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>523</td>--><td class='tdleft'>Signum Pro X-Perience 17 (1.24)</td><td>Polyester</td><td>224.6</td><td>25.2</td><td>6.2</td>
+				</tr>
+				<tr>
+				<!--<td>524</td>--><td class='tdleft'>Signum Pro Tornado 16</td><td>Polyester</td><td>215.5</td><td>47.7</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>525</td>--><td class='tdleft'>Signum Pro Tornado 18 (1.17)</td><td>Polyester</td><td>167.4</td><td>39.1</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>526</td>--><td class='tdleft'>Signum Pro Plasma HEXtreme 16 (1.30)</td><td>Polyester</td><td>225.7</td><td>24.8</td><td>7.3</td>
+				</tr>
+				<tr>
+				<!--<td>527</td>--><td class='tdleft'>Signum Pro Tornado 17 (1.23)</td><td>Polyester</td><td>214.3</td><td>44.3</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>528</td>--><td class='tdleft'>Signum Pro Poly-Plasma Pure 17L (1.18)</td><td>Polyester</td><td>196.0</td><td>44.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>529</td>--><td class='tdleft'>Signum Pro Yellow Jacket 17g (1.22)</td><td>Polyester</td><td>197.7</td><td>32.6</td><td>6.3</td>
+				</tr>
+				<tr>
+				<!--<td>530</td>--><td class='tdleft'>Signum Pro Poly-Plasma Pure 16L</td><td>Polyester</td><td>221.2</td><td>40.6</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>531</td>--><td class='tdleft'>Signum Pro Plasma HEXtreme 16L/1.25</td><td>Polyester</td><td>204.6</td><td>41.5</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>532</td>--><td class='tdleft'>Signum Pro Hyperion 18 (1.18)</td><td>Polyester</td><td>184.0</td><td>36.1</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>533</td>--><td class='tdleft'>Signum Pro Poly-Plasma 16L</td><td>Polyester</td><td>225.7</td><td>39.2</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>534</td>--><td class='tdleft'>Solinco Hyper-G 16</td><td>Polyester</td><td>219.5</td><td>26.3</td><td>7.0</td>
+				</tr>
+				<tr>
+				<!--<td>535</td>--><td class='tdleft'>Solinco Revolution 17</td><td>Polyester</td><td>188.6</td><td>50.0</td><td>6.6</td>
+				</tr>
+				<tr>
+				<!--<td>536</td>--><td class='tdleft'>Solinco Tour Bite Soft 17 (1.20)</td><td>Polyester</td><td>186.3</td><td>29.2</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>537</td>--><td class='tdleft'>Solinco Tour Bite Diamond Rough 16L (1.25)</td><td>Polyester</td><td>191.5</td><td>47.0</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>538</td>--><td class='tdleft'>Solinco Outlast 16</td><td>Polyester</td><td>208.0</td><td>47.3</td><td>6.0</td>
+				</tr>
+				<tr>
+				<!--<td>539</td>--><td class='tdleft'>Solinco Hyper-G 18 (1.15)</td><td>Polyester</td><td>180.0</td><td>28.3</td><td>7.5</td>
+				</tr>
+				<tr>
+				<!--<td>540</td>--><td class='tdleft'>Solinco X-Natural 16 (1.30)</td><td>Nylon</td><td>144.6</td><td>21.5</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>541</td>--><td class='tdleft'>Solinco Tour Bite 16 Soft</td><td>Polyester</td><td>184.0</td><td>50.3</td><td>6.9</td>
+				</tr>
+				<tr>
+				<!--<td>542</td>--><td class='tdleft'>Solinco Tour Bite 18 (1.15)</td><td>Polyester</td><td>161.7</td><td>50.6</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>543</td>--><td class='tdleft'>Solinco Revolution 16L (1.25)</td><td>Polyester</td><td>212.6</td><td>28.4</td><td>8.0</td>
+				</tr>
+				<tr>
+				<!--<td>544</td>--><td class='tdleft'>Solinco Tour Bite 20 (1.05)</td><td>Polyester</td><td>136.0</td><td>47.3</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>545</td>--><td class='tdleft'>Solinco Tour Bite 16</td><td>Polyester</td><td>202.9</td><td>47.1</td><td>6.7</td>
+				</tr>
+				<tr>
+				<!--<td>546</td>--><td class='tdleft'>Solinco Tour Bite Soft 18 (1.15)</td><td>Polyester</td><td>172.0</td><td>31.3</td><td>7.3</td>
+				</tr>
+				<tr>
+				<!--<td>547</td>--><td class='tdleft'>Solinco Tour Bite Diamond Rough 17 (1.20)</td><td>Polyester</td><td>181.7</td><td>43.5</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>548</td>--><td class='tdleft'>Solinco Outlast 17</td><td>Polyester</td><td>182.9</td><td>50.4</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>549</td>--><td class='tdleft'>Solinco Barb Wire 16L (1.25)</td><td>Polyester</td><td>182.9</td><td>33.5</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>550</td>--><td class='tdleft'>Solinco X-Natural 17 (1.20)</td><td>Nylon</td><td>158.9</td><td>21.3</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>551</td>--><td class='tdleft'>Solinco Revolution 18 (1.16)</td><td>Polyester</td><td>195.5</td><td>28.7</td><td>6.3</td>
+				</tr>
+				<tr>
+				<!--<td>552</td>--><td class='tdleft'>Solinco Tour Bite 16L (1.25)</td><td>Polyester</td><td>237.7</td><td>25.2</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>553</td>--><td class='tdleft'>Solinco Outlast 16L (1.25)</td><td>Polyester</td><td>208.0</td><td>28.8</td><td>6.5</td>
+				</tr>
+				<tr>
+				<!--<td>554</td>--><td class='tdleft'>Solinco Tour Bite 17</td><td>Polyester</td><td>181.2</td><td>48.6</td><td>6.3</td>
+				</tr>
+				<tr>
+				<!--<td>555</td>--><td class='tdleft'>Solinco Tour Bite 15L (1.35)</td><td>Polyester</td><td>238.9</td><td>23.7</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>556</td>--><td class='tdleft'>Solinco Revolution 16</td><td>Polyester</td><td>215.5</td><td>47.4</td><td>6.4</td>
+				</tr>
+				<tr>
+				<!--<td>557</td>--><td class='tdleft'>Solinco Confidential 16 (1.30)</td><td>Polyester</td><td>222.3</td><td>22.2</td><td>6.4</td>
+				</tr>
+				<tr>
+				<!--<td>558</td>--><td class='tdleft'>Solinco Hyper-G 16L (1.25)</td><td>Polyester</td><td>218.3</td><td>24.7</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>559</td>--><td class='tdleft'>Solinco Tour Bite Soft 16L (1.25)</td><td>Polyester</td><td>192.0</td><td>29.3</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>560</td>--><td class='tdleft'>Solinco Tour Bite Diamond Rough 16 (1.30)</td><td>Polyester</td><td>192.6</td><td>52.0</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>561</td>--><td class='tdleft'>Solinco Hyper-G 17 (1.20)</td><td>Polyester</td><td>194.9</td><td>25.7</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>562</td>--><td class='tdleft'>Solinco Vanquish 17 (1.20)</td><td>Nylon</td><td>145.7</td><td>17.0</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>563</td>--><td class='tdleft'>Solinco Barb Wire 17 (1.20)</td><td>Polyester</td><td>186.3</td><td>42.6</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>564</td>--><td class='tdleft'>Solinco Outlast 18 (1.15)</td><td>Polyester</td><td>186.3</td><td>26.9</td><td>6.6</td>
+				</tr>
+				<tr>
+				<!--<td>565</td>--><td class='tdleft'>Solinco Barb Wire 16</td><td>Polyester</td><td>214.3</td><td>40.2</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>566</td>--><td class='tdleft'>Solinco Vanquish 16</td><td>Nylon</td><td>160.0</td><td>20.8</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>567</td>--><td class='tdleft'>Solinco Hyper-G-Soft 16L (1.25)</td><td>Polyester</td><td>172.0</td><td>28.7</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>568</td>--><td class='tdleft'>Solinco Tour Bite 19 (1.10)</td><td>Polyester</td><td>171.5</td><td>32.2</td><td>7.2</td>
+				</tr>
+				<tr>
+				<!--<td>569</td>--><td class='tdleft'>Super String Tour Players V3 17 (1.20)</td><td>Polyester</td><td>197.7</td><td>45.0</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>570</td>--><td class='tdleft'>SuperString Nikita Original 1.25</td><td>Polyester</td><td>198.9</td><td>42.9</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>571</td>--><td class='tdleft'>SuperString VooDoo Tour V9 17</td><td>Nylon/Polyester</td><td>160.6</td><td>31.5</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>572</td>--><td class='tdleft'>SuperString Viper V2 Rough 16L</td><td>Polyester</td><td>194.3</td><td>38.3</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>573</td>--><td class='tdleft'>SuperString Pure Control V8 17</td><td>Polyester</td><td>162.9</td><td>50.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>574</td>--><td class='tdleft'>SuperString Nikita Soft 16L</td><td>Polyester</td><td>182.9</td><td>49.2</td><td>0.0</td>
+				</tr>
+				<tr>
+				<!--<td>575</td>--><td class='tdleft'>Tecnifibre Ruff Code 17 (1.25)</td><td>Polyester</td><td>207.5</td><td>28.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>576</td>--><td class='tdleft'>Tecnifibre Pro Red Code Wax 17</td><td>Polyester</td><td>235.5</td><td>28.8</td><td>6.5</td>
+				</tr>
+				<tr>
+				<!--<td>577</td>--><td class='tdleft'>Tecnifibre Multi-Feel 17 (1.25)</td><td>Nylon/Polyurethane</td><td>150.3</td><td>20.9</td><td>2.6</td>
+				</tr>
+				<tr>
+				<!--<td>578</td>--><td class='tdleft'>Tecnifibre E-Matrix 16</td><td>Nylon/Polyurethane</td><td>143.4</td><td>20.4</td><td>2.7</td>
+				</tr>
+				<tr>
+				<!--<td>579</td>--><td class='tdleft'>Tecnifibre NRG2 17/1.24</td><td>Nylon</td><td>164.0</td><td>15.1</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>580</td>--><td class='tdleft'>Tecnifibre X-Code 16</td><td>Polyester</td><td>188.0</td><td>37.9</td><td>2.0</td>
+				</tr>
+				<tr>
+				<!--<td>581</td>--><td class='tdleft'>Tecnifibre Black Code 16</td><td>Polyester</td><td>249.7</td><td>37.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>582</td>--><td class='tdleft'>Tecnifibre XR3 17</td><td>Nylon/Polyurethane</td><td>160.6</td><td>18.0</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>583</td>--><td class='tdleft'>Tecnifibre Pro Red Code 17</td><td>Polyester</td><td>225.7</td><td>36.4</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>584</td>--><td class='tdleft'>Tecnifibre XR3 16</td><td>Nylon/Polyurethane</td><td>162.9</td><td>20.8</td><td>2.9</td>
+				</tr>
+				<tr>
+				<!--<td>585</td>--><td class='tdleft'>Tecnifibre Razor Code 17 (1.25)</td><td>Polyester</td><td>229.2</td><td>29.6</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>586</td>--><td class='tdleft'>Tecnifibre Black Code 18</td><td>Polyester</td><td>202.9</td><td>40.7</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>587</td>--><td class='tdleft'>Tecnifibre Black Code 4S 18 (1.20)</td><td>Polyester</td><td>210.3</td><td>25.4</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>588</td>--><td class='tdleft'>Tecnifibre Triax 16 (1.33)</td><td>Nylon/Polyester</td><td>161.7</td><td>25.0</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>589</td>--><td class='tdleft'>Tecnifibre Pro Mix 16</td><td>Nylon/Polyester</td><td>156.6</td><td>37.7</td><td>2.6</td>
+				</tr>
+				<tr>
+				<!--<td>590</td>--><td class='tdleft'>Tecnifibre TGV 17/1.25</td><td>Nylon/Polyurethane</td><td>165.2</td><td>21.2</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>591</td>--><td class='tdleft'>Tecnifibre Black Code 15L (1.32)</td><td>Polyester</td><td>210.3</td><td>29.5</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>592</td>--><td class='tdleft'>Tecnifibre X-One Biphase 16</td><td>Nylon/Polyurethane</td><td>162.9</td><td>17.7</td><td>1.6</td>
+				</tr>
+				<tr>
+				<!--<td>593</td>--><td class='tdleft'>Tecnifibre Ice Code 16 (1.30)</td><td>Polyester</td><td>221.2</td><td>35.0</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>594</td>--><td class='tdleft'>Tecnifibre E-Matrix 17</td><td>Nylon</td><td>143.4</td><td>19.1</td><td>2.4</td>
+				</tr>
+				<tr>
+				<!--<td>595</td>--><td class='tdleft'>Tecnifibre Pro Red Code 16</td><td>Polyester</td><td>232.0</td><td>34.8</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>596</td>--><td class='tdleft'>Tecnifibre HDX Tour 17 (1.24)</td><td>Nylon/Polyurethane</td><td>144.0</td><td>10.9</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>597</td>--><td class='tdleft'>Tecnifibre Black Code 4S 17 (1.25)</td><td>Polyester</td><td>209.2</td><td>28.3</td><td>9.8</td>
+				</tr>
+				<tr>
+				<!--<td>598</td>--><td class='tdleft'>Tecnifibre Pro Mix 17</td><td>Nylon/Polyester</td><td>169.7</td><td>34.3</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>599</td>--><td class='tdleft'>Tecnifibre X-One Biphase 18</td><td>Nylon</td><td>145.7</td><td>18.9</td><td>1.6</td>
+				</tr>
+				<tr>
+				<!--<td>600</td>--><td class='tdleft'>Tecnifibre Black Code 4S 16 (1.30)</td><td>Polyester</td><td>242.9</td><td>25.5</td><td>9.2</td>
+				</tr>
+				<tr>
+				<!--<td>601</td>--><td class='tdleft'>Tecnifibre Razor Code 16 (1.30)</td><td>Polyester</td><td>242.9</td><td>32.7</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>602</td>--><td class='tdleft'>Tecnifibre Multi-Feel 16</td><td>Nylon/Polyurethane</td><td>154.9</td><td>21.4</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>603</td>--><td class='tdleft'>Tecnifibre Multifeel 16 Black (1.30)</td><td>Nylon/Polyurethane</td><td>148.6</td><td>18.1</td><td>6.9</td>
+				</tr>
+				<tr>
+				<!--<td>604</td>--><td class='tdleft'>Tecnifibre Ruff Code 16 (1.30)</td><td>Polyester</td><td>207.5</td><td>31.3</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>605</td>--><td class='tdleft'>Tecnifibre NRG2 18 (1.18)</td><td>Nylon/Polyurethane</td><td>150.9</td><td>20.0</td><td>2.6</td>
+				</tr>
+				<tr>
+				<!--<td>606</td>--><td class='tdleft'>Tecnifibre TGV 16</td><td>Nylon/Polyurethane</td><td>157.2</td><td>24.8</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>607</td>--><td class='tdleft'>Tecnifibre HDX Tour 16 (1.30)</td><td>Nylon/Polyester</td><td>149.2</td><td>12.0</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>608</td>--><td class='tdleft'>Tecnifibre Duramix HD 17</td><td>Nylon/Polyester</td><td>169.7</td><td>32.0</td><td>1.7</td>
+				</tr>
+				<tr>
+				<!--<td>609</td>--><td class='tdleft'>Tecnifibre X-One Biphase 17</td><td>Nylon/Polyurethane</td><td>166.9</td><td>15.1</td><td>2.1</td>
+				</tr>
+				<tr>
+				<!--<td>610</td>--><td class='tdleft'>Tecnifibre Duramix HD 16</td><td>Nylon/Polyester</td><td>162.3</td><td>34.1</td><td>2.2</td>
+				</tr>
+				<tr>
+				<!--<td>611</td>--><td class='tdleft'>Tecnifibre NRG2 16</td><td>Nylon</td><td>158.3</td><td>18.3</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>612</td>--><td class='tdleft'>Tecnifibre Pro Red Code 18</td><td>Polyester</td><td>217.2</td><td>36.3</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>613</td>--><td class='tdleft'>Tecnifibre Razor Code 18 (1.20)</td><td>Polyester</td><td>216.6</td><td>28.3</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>614</td>--><td class='tdleft'>Tecnifibre Black Code 17</td><td>Polyester</td><td>236.0</td><td>40.2</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>615</td>--><td class='tdleft'>Tecnifibre Polyspin 16L</td><td>Polyester</td><td>226.9</td><td>36.3</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>616</td>--><td class='tdleft'>Toalson Leoina 77 (1.30)</td><td>Nylon</td><td>157.2</td><td>17.7</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>617</td>--><td class='tdleft'>Topspin Cyber Blue 17L (1.20)</td><td>Polyester</td><td>184.6</td><td>33.7</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>618</td>--><td class='tdleft'>Topspin Cyber Delta 17 (1.26)</td><td>Polyester</td><td>200.6</td><td>34.7</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>619</td>--><td class='tdleft'>Topspin Cyber Blue 16</td><td>Polyester</td><td>189.7</td><td>43.3</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>620</td>--><td class='tdleft'>Topspin Cyber Flash 17</td><td>Polyester</td><td>158.9</td><td>54.9</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>621</td>--><td class='tdleft'>Topspin Cyber Flash 17L</td><td>Polyester</td><td>144.0</td><td>59.1</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>622</td>--><td class='tdleft'>Topspin Cyber Blue 17</td><td>Polyester</td><td>183.5</td><td>46.1</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>623</td>--><td class='tdleft'>Topspin Cyber Whirl 17 (1.24)</td><td>Polyester</td><td>204.0</td><td>27.0</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>624</td>--><td class='tdleft'>Topspin Cyber Flash 16</td><td>Polyester</td><td>185.2</td><td>46.5</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>625</td>--><td class='tdleft'>Tourna Big Hitter Blue 17</td><td>Polyester</td><td>222.3</td><td>36.3</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>626</td>--><td class='tdleft'>Tourna Quasi-Gut Armor 16</td><td>Nylon/Polyester</td><td>153.2</td><td>13.2</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>627</td>--><td class='tdleft'>Tourna Big Hitter Silver 7 Tour 16 (1.30)</td><td>Polyester</td><td>238.3</td><td>18.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>628</td>--><td class='tdleft'>Tourna Synthetic Gut Armor 16</td><td>Nylon/Polyester</td><td>172.0</td><td>14.3</td><td>5.9</td>
+				</tr>
+				<tr>
+				<!--<td>629</td>--><td class='tdleft'>Tourna Big Hitter Blue Rough 17</td><td>Polyester</td><td>209.7</td><td>43.8</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>630</td>--><td class='tdleft'>Tourna Big Hitter 16</td><td>Polyester</td><td>225.7</td><td>39.8</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>631</td>--><td class='tdleft'>Tourna Big HItter Black 7 16 (1.25)</td><td>Polyester</td><td>222.9</td><td>24.3</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>632</td>--><td class='tdleft'>Tourna Big Hitter Blue Rough 16</td><td>Polyester</td><td>222.3</td><td>40.5</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>633</td>--><td class='tdleft'>Tourna Quasi Gut 17</td><td>Nylon</td><td>129.2</td><td>24.7</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>634</td>--><td class='tdleft'>Tourna Big Hitter Silver 17</td><td>Polyester</td><td>185.7</td><td>44.0</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>635</td>--><td class='tdleft'>Tourna Synthetic Gut Armor 17</td><td>Nylon/Polyester</td><td>157.2</td><td>15.5</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>636</td>--><td class='tdleft'>Tourna Big HItter Silver 16</td><td>Polyester</td><td>209.2</td><td>26.3</td><td>6.8</td>
+				</tr>
+				<tr>
+				<!--<td>637</td>--><td class='tdleft'>Tourna Big Hitter Silver Rough 16</td><td>Polyester</td><td>206.3</td><td>45.0</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>638</td>--><td class='tdleft'>Tourna Big Hitter Black 7 17</td><td>Polyester</td><td>175.5</td><td>43.0</td><td>6.3</td>
+				</tr>
+				<tr>
+				<!--<td>639</td>--><td class='tdleft'>Tourna Irradiated 16</td><td>Nylon</td><td>162.9</td><td>23.6</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>640</td>--><td class='tdleft'>Tourna Quasi-Gut Armor 17</td><td>Nylon/Polyester</td><td>144.0</td><td>17.6</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>641</td>--><td class='tdleft'>Tourna Black Zone 16</td><td>Polyester</td><td>197.2</td><td>29.5</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>642</td>--><td class='tdleft'>Tourna Irradiated 17</td><td>Nylon</td><td>153.7</td><td>17.1</td><td>5.4</td>
+				</tr>
+				<tr>
+				<!--<td>643</td>--><td class='tdleft'>Tourna Big Hitter Blue 16</td><td>Polyester</td><td>226.3</td><td>37.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>644</td>--><td class='tdleft'>Tourna Black Zone 17</td><td>Polyester</td><td>186.9</td><td>31.5</td><td>6.0</td>
+				</tr>
+				<tr>
+				<!--<td>645</td>--><td class='tdleft'>Tourna Big Hitter Silver Rough 17</td><td>Polyester</td><td>197.2</td><td>42.1</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>646</td>--><td class='tdleft'>Tourna Quasi-Gut 16</td><td>Nylon</td><td>154.3</td><td>24.3</td><td>0.0</td>
+				</tr>
+				<tr>
+				<!--<td>647</td>--><td class='tdleft'>Volkl Cyclone Tour 18 (1.20)</td><td>Polyester</td><td>159.4</td><td>51.3</td><td>7.8</td>
+				</tr>
+				<tr>
+				<!--<td>648</td>--><td class='tdleft'>Volkl V-Torque 16</td><td>Polyester</td><td>181.7</td><td>49.7</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>649</td>--><td class='tdleft'>Volkl Gripper 16</td><td>Nylon</td><td>153.2</td><td>22.0</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>650</td>--><td class='tdleft'>Volkl Synthetic Gut 16</td><td>Nylon</td><td>173.7</td><td>20.3</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>651</td>--><td class='tdleft'>Volkl V-Star 18L (1.15)</td><td>Polyester</td><td>174.3</td><td>33.1</td><td>6.5</td>
+				</tr>
+				<tr>
+				<!--<td>652</td>--><td class='tdleft'>Volkl V-Pro 18</td><td>Polyester</td><td>213.2</td><td>33.1</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>653</td>--><td class='tdleft'>Volkl Cyclone 18L (1.15)</td><td>Polyester</td><td>188.0</td><td>29.4</td><td>9.0</td>
+				</tr>
+				<tr>
+				<!--<td>654</td>--><td class='tdleft'>Volkl Power-Fiber II 18</td><td>Nylon</td><td>157.2</td><td>22.8</td><td>2.9</td>
+				</tr>
+				<tr>
+				<!--<td>655</td>--><td class='tdleft'>Volkl Power-Fiber II 17</td><td>Nylon</td><td>158.9</td><td>19.6</td><td>2.7</td>
+				</tr>
+				<tr>
+				<!--<td>656</td>--><td class='tdleft'>Volkl Synthetic Gut 17</td><td>Nylon</td><td>158.9</td><td>22.2</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>657</td>--><td class='tdleft'>Volkl V-Star 19 (1.10)</td><td>Polyester</td><td>166.9</td><td>35.7</td><td>6.5</td>
+				</tr>
+				<tr>
+				<!--<td>658</td>--><td class='tdleft'>Volkl Cyclone 17</td><td>Polyester</td><td>191.5</td><td>48.1</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>659</td>--><td class='tdleft'>Volkl V-Torque 18 (1.18)</td><td>Polyester</td><td>157.2</td><td>45.7</td><td>6.0</td>
+				</tr>
+				<tr>
+				<!--<td>660</td>--><td class='tdleft'>Volkl V-Star 16 (1.30)</td><td>Polyester</td><td>172.6</td><td>54.5</td><td>6.9</td>
+				</tr>
+				<tr>
+				<!--<td>661</td>--><td class='tdleft'>Volkl V-Pro 16</td><td>Polyester</td><td>233.7</td><td>39.2</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>662</td>--><td class='tdleft'>Volkl Power-Fiber II 16</td><td>Nylon</td><td>158.9</td><td>21.1</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>663</td>--><td class='tdleft'>Volkl Cyclone 19 (1.10)</td><td>Polyester</td><td>182.9</td><td>33.2</td><td>8.2</td>
+				</tr>
+				<tr>
+				<!--<td>664</td>--><td class='tdleft'>Volkl Cyclone Tour 16 (1.30)</td><td>Polyester</td><td>167.4</td><td>52.1</td><td>8.7</td>
+				</tr>
+				<tr>
+				<!--<td>665</td>--><td class='tdleft'>Volkl V-Torque Tour 16 (1.30)</td><td>Polyester</td><td>184.0</td><td>38.3</td><td>8.5</td>
+				</tr>
+				<tr>
+				<!--<td>666</td>--><td class='tdleft'>Volkl V-Square 16 (1.30)</td><td>Polyester</td><td>190.9</td><td>47.9</td><td>11.3</td>
+				</tr>
+				<tr>
+				<!--<td>667</td>--><td class='tdleft'>Volkl Gripper 17</td><td>Nylon</td><td>138.3</td><td>24.5</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>668</td>--><td class='tdleft'>Volkl Cyclone 18</td><td>Polyester</td><td>181.2</td><td>48.1</td><td>7.1</td>
+				</tr>
+				<tr>
+				<!--<td>669</td>--><td class='tdleft'>Volkl Cyclone 16</td><td>Polyester</td><td>197.2</td><td>47.9</td><td>6.2</td>
+				</tr>
+				<tr>
+				<!--<td>670</td>--><td class='tdleft'>Volkl Cyclone Tour 17 (1.25)</td><td>Polyester</td><td>170.9</td><td>52.6</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>671</td>--><td class='tdleft'>Volkl V-Star 18 (1.20)</td><td>Polyester</td><td>163.4</td><td>50.7</td><td>0.0</td>
+				</tr>
+				<tr>
+				<!--<td>672</td>--><td class='tdleft'>Volkl V-Pro 17</td><td>Polyester</td><td>188.0</td><td>47.7</td><td>5.1</td>
+				</tr>
+				<tr>
+				<!--<td>673</td>--><td class='tdleft'>Weiss Cannon Turbotwist 17L (1.18)</td><td>Polyester</td><td>203.5</td><td>48.6</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>674</td>--><td class='tdleft'>Weiss Cannon Red Ghost  17L (1.18)</td><td>Polyester</td><td>189.7</td><td>34.0</td><td>8.5</td>
+				</tr>
+				<tr>
+				<!--<td>675</td>--><td class='tdleft'>Weiss Cannon Mosquito Bite 18 (1.16)</td><td>Polyester</td><td>182.3</td><td>35.4</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>676</td>--><td class='tdleft'>Weiss Cannon MatchPower 1.25</td><td>Polyester</td><td>218.3</td><td>38.4</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>677</td>--><td class='tdleft'>Weiss Cannon Turbotwist 17 (1.24)</td><td>Polyester</td><td>216.6</td><td>49.5</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>678</td>--><td class='tdleft'>Weiss Cannon Ultra Cable 17 (1.23)</td><td>Polyester</td><td>174.9</td><td>47.7</td><td>11.9</td>
+				</tr>
+				<tr>
+				<!--<td>679</td>--><td class='tdleft'>Weiss Cannon Silverstring 1.25</td><td>Polyester</td><td>195.5</td><td>43.8</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>680</td>--><td class='tdleft'>Weiss Cannon Black 5 Edge 17 (1.24)</td><td>Polyester</td><td>215.5</td><td>32.8</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>681</td>--><td class='tdleft'>Weiss Cannon 6 Star 16 (1.30)</td><td>Nylon</td><td>151.4</td><td>16.3</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>682</td>--><td class='tdleft'>Weiss Cannon Explosiv 1.30</td><td>Nylon</td><td>150.9</td><td>25.3</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>683</td>--><td class='tdleft'>Weiss Cannon Silverstring 120</td><td>Polyester</td><td>167.4</td><td>50.6</td><td>3.7</td>
+				</tr>
+				<tr>
+				<!--<td>684</td>--><td class='tdleft'>Weiss Cannon Scorpion 1.33</td><td>Polyester</td><td>222.9</td><td>47.8</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>685</td>--><td class='tdleft'>Weiss Cannon Blue Rock N Power</td><td>Polyester</td><td>224.0</td><td>27.0</td><td>11.1</td>
+				</tr>
+				<tr>
+				<!--<td>686</td>--><td class='tdleft'>Weiss Cannon Scorpion 16L (1.28)</td><td>Polyester</td><td>200.0</td><td>35.2</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>687</td>--><td class='tdleft'>Weiss Cannon Scorpion 1.22</td><td>Polyester</td><td>192.6</td><td>44.2</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>688</td>--><td class='tdleft'>Wilson NXT Power 17 (1.26)</td><td>Nylon</td><td>157.7</td><td>14.3</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>689</td>--><td class='tdleft'>Wilson NXT Max 16</td><td>Nylon</td><td>169.7</td><td>20.7</td><td>2.5</td>
+				</tr>
+				<tr>
+				<!--<td>690</td>--><td class='tdleft'>Wilson Enduro Tour 18</td><td>Polyester</td><td>159.4</td><td>63.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>691</td>--><td class='tdleft'>Wilson Sensation Control 16 (1.30)</td><td>Nylon</td><td>150.3</td><td>13.7</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>692</td>--><td class='tdleft'>Wilson Hollow Core Pro 17</td><td>Nylon</td><td>150.3</td><td>33.7</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>693</td>--><td class='tdleft'>Wilson Reaction 16</td><td>Nylon</td><td>146.3</td><td>26.4</td><td>2.4</td>
+				</tr>
+				<tr>
+				<!--<td>694</td>--><td class='tdleft'>Wilson Synthetic Gut Control 17 (1.25)</td><td>Nylon</td><td>158.3</td><td>16.9</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>695</td>--><td class='tdleft'>Wilson Ripspin 16</td><td>Polyester</td><td>212.0</td><td>39.6</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>696</td>--><td class='tdleft'>Wilson Sensation 16</td><td>Nylon</td><td>168.6</td><td>21.2</td><td>3.5</td>
+				</tr>
+				<tr>
+				<!--<td>697</td>--><td class='tdleft'>Wilson NXT Control 16 (1.32)</td><td>Nylon/Polyester</td><td>163.4</td><td>31.0</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>698</td>--><td class='tdleft'>Wilson NXT Duramax 15 (1.40)</td><td>Nylon</td><td>161.7</td><td>17.6</td><td>4.5</td>
+				</tr>
+				<tr>
+				<!--<td>699</td>--><td class='tdleft'>Wilson NXT 16</td><td>Nylon</td><td>173.7</td><td>20.5</td><td>3.9</td>
+				</tr>
+				<tr>
+				<!--<td>700</td>--><td class='tdleft'>Wilson Revolve 15 (1.35)</td><td>Polyester</td><td>192.0</td><td>41.6</td><td>6.1</td>
+				</tr>
+				<tr>
+				<!--<td>701</td>--><td class='tdleft'>Wilson SGX 16</td><td>Nylon</td><td>166.3</td><td>19.1</td><td>3.1</td>
+				</tr>
+				<tr>
+				<!--<td>702</td>--><td class='tdleft'>Wilson Revolve Spin 16</td><td>Polyester</td><td>172.6</td><td>54.5</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>703</td>--><td class='tdleft'>Wilson NXT Tour 16</td><td>Nylon</td><td>180.6</td><td>21.3</td><td>3.8</td>
+				</tr>
+				<tr>
+				<!--<td>704</td>--><td class='tdleft'>Wilson NXT Max 15L (1.35)</td><td>Nylon</td><td>156.0</td><td>13.1</td><td>7.2</td>
+				</tr>
+				<tr>
+				<!--<td>705</td>--><td class='tdleft'>Wilson K-Gut 16</td><td>Nylon</td><td>171.5</td><td>19.7</td><td>4.4</td>
+				</tr>
+				<tr>
+				<!--<td>706</td>--><td class='tdleft'>Wilson Sensation 15 (1.35)</td><td>Nylon</td><td>154.3</td><td>16.6</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>707</td>--><td class='tdleft'>Wilson Synthetic Gut Extreme 17</td><td>Nylon</td><td>185.2</td><td>19.2</td><td>2.8</td>
+				</tr>
+				<tr>
+				<!--<td>708</td>--><td class='tdleft'>Wilson Extreme 16 Synthetic Gut</td><td>Nylon</td><td>174.3</td><td>20.0</td><td>3.2</td>
+				</tr>
+				<tr>
+				<!--<td>709</td>--><td class='tdleft'>Wilson Enduro Tour 17</td><td>Polyester</td><td>169.7</td><td>62.4</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>710</td>--><td class='tdleft'>Wilson Revolve 17 (1.25)</td><td>Polyester</td><td>192.0</td><td>36.2</td><td>7.7</td>
+				</tr>
+				<tr>
+				<!--<td>711</td>--><td class='tdleft'>Wilson Synthetic Gut Power 17 (1.25)</td><td>Nylon</td><td>158.3</td><td>15.0</td><td>5.5</td>
+				</tr>
+				<tr>
+				<!--<td>712</td>--><td class='tdleft'>Wilson Ripspin 17</td><td>Polyester</td><td>209.2</td><td>37.8</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>713</td>--><td class='tdleft'>Wilson Sensation 17</td><td>Nylon</td><td>163.4</td><td>21.5</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>714</td>--><td class='tdleft'>Wilson Stamina 16</td><td>Nylon</td><td>183.5</td><td>21.2</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>715</td>--><td class='tdleft'>Wilson Enduro Pro 17 (1.25)</td><td>Nylon/Polyester</td><td>226.9</td><td>32.9</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>716</td>--><td class='tdleft'>Wilson NXT Tour 17</td><td>Nylon</td><td>175.5</td><td>18.4</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>717</td>--><td class='tdleft'>Wilson Red Alert 16</td><td>Nylon</td><td>190.9</td><td>19.8</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>718</td>--><td class='tdleft'>Wilson Natural Gut 17</td><td>Gut</td><td>80.6</td><td>15.2</td><td>2.2</td>
+				</tr>
+				<tr>
+				<!--<td>719</td>--><td class='tdleft'>Wilson Hollow Core 16</td><td>Nylon</td><td>150.3</td><td>33.7</td><td>3.3</td>
+				</tr>
+				<tr>
+				<!--<td>720</td>--><td class='tdleft'>Wilson Natural Gut 16 (1.30)</td><td>Gut</td><td>92.6</td><td>12.1</td><td>4.0</td>
+				</tr>
+				<tr>
+				<!--<td>721</td>--><td class='tdleft'>Wilson NXT 15L (1.35)</td><td>Nylon</td><td>152.0</td><td>18.5</td><td>7.0</td>
+				</tr>
+				<tr>
+				<!--<td>722</td>--><td class='tdleft'>Wilson Enduro Pro 16</td><td>Polyester</td><td>219.5</td><td>36.3</td><td>4.7</td>
+				</tr>
+				<tr>
+				<!--<td>723</td>--><td class='tdleft'>Wilson NXT Duramax 16 (1.32)</td><td>Nylon</td><td>160.0</td><td>13.7</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>724</td>--><td class='tdleft'>Wilson Enduro Mono 16L</td><td>Polyester</td><td>230.3</td><td>41.5</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>725</td>--><td class='tdleft'>Wilson K-Gut Pro 16</td><td>Nylon</td><td>168.0</td><td>18.3</td><td>1.6</td>
+				</tr>
+				<tr>
+				<!--<td>726</td>--><td class='tdleft'>Wilson Enduro Tour 16</td><td>Polyester</td><td>251.5</td><td>37.6</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>727</td>--><td class='tdleft'>Wilson Synthetic Gut Power 16 (1.30)</td><td>Nylon</td><td>156.0</td><td>15.2</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>728</td>--><td class='tdleft'>Wilson Ripspin 15</td><td>Polyester</td><td>212.0</td><td>41.7</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>729</td>--><td class='tdleft'>Wilson NXT 17</td><td>Nylon</td><td>156.0</td><td>23.0</td><td>2.0</td>
+				</tr>
+				<tr>
+				<!--<td>730</td>--><td class='tdleft'>Wilson Sensation Supreme 16</td><td>Nylon</td><td>143.4</td><td>27.9</td><td>3.0</td>
+				</tr>
+				<tr>
+				<!--<td>731</td>--><td class='tdleft'>Wilson Spin Cycle 16L</td><td>Polyester</td><td>205.7</td><td>38.7</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>732</td>--><td class='tdleft'>Wilson Optimus 16 (1.30)</td><td>Nylon</td><td>140.0</td><td>22.8</td><td>3.6</td>
+				</tr>
+				<tr>
+				<!--<td>733</td>--><td class='tdleft'>Wilson Hollow Core Pro 16</td><td>Nylon</td><td>146.9</td><td>31.7</td><td>2.2</td>
+				</tr>
+				<tr>
+				<!--<td>734</td>--><td class='tdleft'>Wilson Natural Gut 16</td><td>Gut</td><td>96.6</td><td>17.3</td><td>1.3</td>
+				</tr>
+				<tr>
+				<!--<td>735</td>--><td class='tdleft'>Wilson NXT OS</td><td>Nylon</td><td>169.7</td><td>18.8</td><td>2.5</td>
+				</tr>
+				<tr>
+				<!--<td>736</td>--><td class='tdleft'>Wilson Revolve 16 (1.30)</td><td>Polyester</td><td>184.0</td><td>45.2</td><td>7.2</td>
+				</tr>
+				<tr>
+				<!--<td>737</td>--><td class='tdleft'>Wilson Shock Shield 16</td><td>Nylon</td><td>156.0</td><td>32.3</td><td>2.3</td>
+				</tr>
+				<tr>
+				<!--<td>738</td>--><td class='tdleft'>Wilson Enduro Gold 16</td><td>Polyester</td><td>213.7</td><td>47.1</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>739</td>--><td class='tdleft'>Y-Tex Quadro Twist 16L</td><td>Polyester</td><td>177.7</td><td>48.5</td><td>6.2</td>
+				</tr>
+				<tr>
+				<!--<td>740</td>--><td class='tdleft'>Yonex Rexis 16 (1.30)</td><td>Nylon</td><td>153.2</td><td>19.1</td><td>4.1</td>
+				</tr>
+				<tr>
+				<!--<td>741</td>--><td class='tdleft'>Yonex Tour Super 850 16 (1.30)</td><td>Nylon</td><td>145.7</td><td>18.7</td><td>4.9</td>
+				</tr>
+				<tr>
+				<!--<td>742</td>--><td class='tdleft'>Yonex Poly Tour Fire 16L (1.25)</td><td>Polyester</td><td>194.9</td><td>35.0</td><td>5.8</td>
+				</tr>
+				<tr>
+				<!--<td>743</td>--><td class='tdleft'>Yonex Tournament 80 Spin 15L-16</td><td></td><td>161.7</td><td>21.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>744</td>--><td class='tdleft'>Yonex Poly Tour Pro 17 (1.20)</td><td>Polyester</td><td>188.6</td><td>33.3</td><td>5.2</td>
+				</tr>
+				<tr>
+				<!--<td>745</td>--><td class='tdleft'>Yonex Poly Tour Air 16L</td><td>Polyester</td><td>154.9</td><td>41.0</td><td>4.2</td>
+				</tr>
+				<tr>
+				<!--<td>746</td>--><td class='tdleft'>Yonex Poly Tour Pro Yellow 16 (1.30)</td><td>Polyester</td><td>191.5</td><td>44.5</td><td>3.4</td>
+				</tr>
+				<tr>
+				<!--<td>747</td>--><td class='tdleft'>Yonex PolyTour REV 16 (1.30)</td><td>Polyester</td><td>208.6</td><td>33.3</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>748</td>--><td class='tdleft'>Yonex Tournament 50 16L</td><td>Nylon</td><td>167.4</td><td>20.7</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>749</td>--><td class='tdleft'>Yonex Tour Super Pro 850 16 (1.32)</td><td>Nylon</td><td>148.6</td><td>16.7</td><td>4.3</td>
+				</tr>
+				<tr>
+				<!--<td>750</td>--><td class='tdleft'>Yonex Poly Tour HS 16L (1.25)</td><td>Polyester</td><td>198.3</td><td>28.5</td><td>5.7</td>
+				</tr>
+				<tr>
+				<!--<td>751</td>--><td class='tdleft'>Yonex Poly Tour Drive 16L (1.25)</td><td>Polyester</td><td>195.5</td><td>47.1</td><td>7.6</td>
+				</tr>
+				<tr>
+				<!--<td>752</td>--><td class='tdleft'>Yonex Rexis Comfort 16L (1.25)</td><td>Nylon</td><td>128.6</td><td>24.0</td><td>6.4</td>
+				</tr>
+				<tr>
+				<!--<td>753</td>--><td class='tdleft'>Yonex Poly Tour HS 16 (1.30)</td><td>Polyester</td><td>213.7</td><td>28.1</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>754</td>--><td class='tdleft'>Yonex Polytour Rev 16L (1.25)</td><td>Polyester</td><td>193.2</td><td>34.4</td><td>7.2</td>
+				</tr>
+				<tr>
+				<!--<td>755</td>--><td class='tdleft'>Yonex Poly Tour Tough 16L</td><td>Polyester</td><td>193.7</td><td>41.2</td><td>5.3</td>
+				</tr>
+				<tr>
+				<!--<td>756</td>--><td class='tdleft'>Yonex Poly Tour Spin G 1.25</td><td>Polyester</td><td>237.2</td><td>25.7</td><td>4.8</td>
+				</tr>
+				<tr>
+				<!--<td>757</td>--><td class='tdleft'>Yonex Mono Preme 16 (1.30)</td><td>Nylon</td><td>166.3</td><td>13.9</td><td>5.0</td>
+				</tr>
+				<tr>
+				<!--<td>758</td>--><td class='tdleft'>Yonex Poly Tour Strike 16L (1.25)</td><td>Polyester</td><td>199.5</td><td>27.9</td><td>4.6</td>
+				</tr>
+				<tr>
+				<!--<td>759</td>--><td class='tdleft'>Yonex Poly Tour 130/16</td><td>Polyester</td><td>217.7</td><td>49.1</td><td>NA</td>
+				</tr>
+				<tr>
+				<!--<td>760</td>--><td class='tdleft'>Yonex Rexis Speed 16L (1.25)</td><td>Nylon</td><td>125.7</td><td>29.1</td><td>5.6</td>
+				</tr>
+				<tr>
+				<!--<td>761</td>--><td class='tdleft'>Yonex Poly Tour Spin 16L (1.25)</td><td>Polyester</td><td>213.7</td><td>27.2</td><td>6.3</td>
+				</tr>
+				<tr>
+				<!--<td>762</td>--><td class='tdleft'>Yonex Poly Tour Pro Yellow 16L (1.25)</td><td>Polyester</td><td>181.2</td><td>46.3</td><td>NA</td>
+				</tr>
+				</table>
+	
+				</div>
+			</div>				
+
+			</div> <!--end toolresults-->
+		</div>	<!--end tool div-->
+	</div> <!--end tool wrapper-->
+		
+	<div class="sidebar">
+	</div>
+
+	<div id="sidemenudiv" class="sidebar2">
+
+	<p class="infopara"><button class="infobutton">Show Instructions</button></p>
+	<p class="moreinfodiv">Choose up to 10 individual strings. Click then shift-click for successive strings. Command or control-click for separated strings. MAKE SURE that "Choose String Material" dropdown is set to "All" when choosing individual strings. <span class="textbold">For results:</span> Click "Get Report" at bottom of table.</p>
+
+	<aside id="sidebar-menu" class="article-menu">
+		<nav>
+<input type="button" id="contents" class="hidden" value="Close Contents" style="float:right;" tabindex="0">
+
+		<form id="datachoices" action='reporter2.php' method='post'>
+		<input type='hidden' name='zbrand' value='all'>
+
+
+
+
+		<table id="choicetable" class="tablescompactstriped">
+			<tbody>   			
+				
+			<tr>
+				<th >Click<br>To<br>Display</th>
+				<th >CHOOSE SEARCH CRITERIA</th>
+			</tr>
+			<tr>
+				<td ><label for='xbrandbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xbrandbox' name='display[]' value='xbrand' checked></td>				<td class="selectlabel4">Brand<br></td>
+			</tr>
+				
+			<tr>
+				<td ><label for='xstringbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xstringbox' name='display[]' value='xstring' checked></td>
+
+				<td><label for="stringchoices" class="selectlabel3">Choose String or Strings</label>
+					<select id='stringchoices' name='zstring[]' multiple='multiple' size='10'>
+						<option value='all' selected>All Strings
+
+<option value=568>Alien Black Diamond 16<option value=745>Alpha Gut 2000 16<option value=498>Ashaway Dynamite 17<option value=501>Ashaway Dynamite Soft 17<option value=502>Ashaway Dynamite Soft 18<option value=213>Ashaway Dynamite WB 16<option value=214>Ashaway Liberty 16<option value=371>Ashaway MonoGut 16L<option value=394>Ashaway MonoGut 17<option value=613>Ashaway MonoGut ZX 16<option value=203>Ashaway Synthetic Gut 16<option value=376>Babolat Addiction 16<option value=385>Babolat Addiction 17<option value=216>Babolat Attraction 16<option value=218>Babolat Ballistic Polymono 16<option value=221>Babolat Conquest 16<option value=378>Babolat Duralast 16<option value=372>Babolat Duralast 17<option value=217>Babolat FiberTour 16<option value=500>Babolat Hurricane Feel 16<option value=571>Babolat Hurricane Feel 17<option value=761>Babolat M7 16 (1.30)<option value=762>Babolat Origin 16 (1.30)<option value=657>Babolat Origin 17<option value=215>Babolat Pro Hurricane 16<option value=362>Babolat Pro Hurricane 17<option value=374>Babolat Pro Hurricane 18<option value=225>Babolat Pro Hurricane Tour 16<option value=363>Babolat Pro Hurricane Tour 17<option value=373>Babolat Revenge 16<option value=377>Babolat Revenge 17<option value=989>Babolat RPM Blast 15L (1.35)<option value=479>Babolat RPM Blast 16<option value=629>Babolat RPM Blast 17/1.25<option value=767>Babolat RPM Blast 18 (1.20)<option value=1039>Babolat RPM Blast Orange 16 (1.30)<option value=966>Babolat RPM Blast Rough 15L<option value=960>Babolat RPM Blast Rough 16<option value=964>Babolat RPM Blast Rough 17<option value=650>Babolat RPM Dual 16<option value=1037>Babolat RPM Soft 16 (1.30)<option value=614>Babolat RPM Team 16 Black<option value=766>Babolat RPM Team 17 (1.25)<option value=685>Babolat SG SpiralTek 16<option value=760>Babolat SpiralTek 17<option value=158>Babolat Super Fine Play 16<option value=763>Babolat Synthetic Gut 16 (1.30)<option value=764>Babolat Synthetic Gut 17 (1.25)<option value=226>Babolat Tonic + Natural Gut 16<option value=358>Babolat VS Natural Team Gut 17 (1.25)<option value=169>Babolat VS Natural ThermoGut 16 Touch<option value=765>Babolat VS Touch 15L (1.35)<option value=220>Babolat Xcel 16<option value=758>Babolat Xcel French Open Black 16<option value=759>Babolat Xcel French Open Black 17<option value=219>Babolat Xcel Power 16<option value=386>Babolat Xcel Power 17<option value=375>Babolat Xcel Premium 17<option value=369>Boris Becker Bomber 16<option value=379>Boris Becker Bomber 17<option value=768>Boris Becker Bomber NYC 16 (1.28)<option value=769>Boris Becker Bomber NYC 17 (1.23)<option value=770>Boris Becker Pulse 16 (1.32)<option value=227>Bow Brand Professional 16<option value=956>Diadem Elite XT 16<option value=957>Diadem Elite XT 17<option value=771>Diadem Impulse 16 (1.32)<option value=772>Diadem Impulse 17 (1.25)<option value=1026>Diadem Solstice Blace 17 (1.20)<option value=773>Diadem Solstice Power 15L (1.35)<option value=735>Diadem Solstice Power 16 (1.30)<option value=774>Diadem Solstice Power 16L (1.25)<option value=733>Diadem Solstice Power 17 (1.20)<option value=775>Diadem Solstice Pro 15L (1.35)<option value=734>Diadem Solstice Pro 16L (1.25)<option value=776>Diadem Solstice Pro 16L (1.25)<option value=719>Double AR 666 (1.30)<option value=714>Double AR Diablo (1.24)<option value=715>Double AR Diablo (1.31)<option value=716>Double AR Raptor 1.27<option value=717>Double AR Twice Dragon(1.30)<option value=718>Double AR Twice Shark (1.25)<option value=720>Double AR WTS 25 (1.25)<option value=633>Dunlop Black Widow 16<option value=630>Dunlop Black Widow 17<option value=777>Dunlop Black Widow 18 (1.21)<option value=459>Dunlop Comfort Poly 17<option value=458>Dunlop Comfort Synthetic 16<option value=557>Dunlop Comfort Synthetic 17<option value=605>Dunlop DNA 16 (1.30)<option value=604>Dunlop DNA 17 (1.22)<option value=511>Dunlop Explosive 16<option value=780>Dunlop Explosive 17 (1.26)<option value=781>Dunlop Explosive 18 (1.20)<option value=1027>Dunlop Explosive Bite 17 (1.27)<option value=460>Dunlop Explosive Poly Max 16<option value=1029>Dunlop Explosive Speed 17 (1.25)<option value=461>Dunlop Explosive Synthetic 16<option value=558>Dunlop Explosive Synthetic Gut 17<option value=1028>Dunlop Explosive Tour 16 (1.30)<option value=509>Dunlop Hexy Fiber 16<option value=556>Dunlop Hexy Fiber 17<option value=778>Dunlop Ice 16 (1.30)<option value=779>Dunlop Ice 17 (1.25)<option value=1033>Dunlop Iconic All 17 (1.25)<option value=1031>Dunlop Iconic Speed 17 (1.25)<option value=1032>Dunlop Iconic Touch 17 (1.25)<option value=607>Dunlop Juice 16 (1.31)<option value=606>Dunlop Juice 17 (1.26)<option value=228>Dunlop M-Fil Tour 16<option value=782>Dunlop Pearl 16 (1.30)<option value=783>Dunlop Pearl 17 (1.25)<option value=784>Dunlop S-Gut 16 (1.32)<option value=555>Dunlop S-Gut 17<option value=785>Dunlop S-Gut 18 (1.19)<option value=608>Dunlop Silk 16 (1.30)<option value=512>Dunlop Silk 17<option value=164>Dunlop Synthetic Gut 16<option value=229>Dunlop Tour Performance 16<option value=457>Dunlop X-Life Synthetic 15L<option value=366>Forten Sweet 16<option value=231>Gamma Asterisk 16<option value=175>Gamma Asterisk Spin 16<option value=234>Gamma Asterisk Tour 16<option value=168>Gamma ESP 16<option value=799>Gamma FXT 16 (1.30)<option value=798>Gamma FXT 17 (1.24)<option value=691>Gamma Glide Cross String 16<option value=793>Gamma IO 17 (1.23)<option value=794>Gamma IO 18 (1.18)<option value=790>Gamma IO Soft 15L (1.40)<option value=791>Gamma IO Soft 16 (1.28)<option value=792>Gamma IO Soft 17 (1.23)<option value=981>Gamma Jet 16L (1.28)<option value=167>Gamma Live Wire 16<option value=805>Gamma Live Wire 17 (1.27)<option value=232>Gamma Live Wire XP 16<option value=807>Gamma Live Wire XP 17 (1.27)<option value=819>Gamma Marathon DPC 15 (1.40)<option value=818>Gamma Marathon DPC 16 (1.32)<option value=412>Gamma Monoblast 16<option value=651>Gamma Moto 16<option value=789>Gamma Moto 17 (1.24)<option value=787>Gamma Moto Soft 16 (1.29)<option value=788>Gamma Moto Soft 17 (1.24)<option value=822>Gamma Ocho 16 (1.30)<option value=823>Gamma Ocho 17 (1.25)<option value=825>Gamma Ocho TNT 16 (1.30)<option value=821>Gamma Ocho TNT 17 (1.25)<option value=824>Gamma Ocho XP 16 (1.32)<option value=820>Gamma Ocho XP 17 (1.27)<option value=655>Gamma Poly Z 16<option value=205>Gamma Prodigy 16<option value=230>Gamma Professional 16<option value=640>Gamma Professional 17<option value=806>Gamma Professional 18 (1.22)<option value=166>Gamma Professional Spin 16<option value=163>Gamma Revelation 16<option value=800>Gamma Revelation 17 (1.27)<option value=654>Gamma RZR Rx 16<option value=795>Gamma RZR Rx 17<option value=816>Gamma Solace 16 (1.32)<option value=817>Gamma Solace 17 (1.27)<option value=204>Gamma Synthetic Gut 16<option value=801>Gamma Synthetic Gut 17 (1.25)<option value=804>Gamma Synthetic Gut 17 W/wearguard (1.22)<option value=802>Gamma Synthetic Gut 18 (1.18)<option value=803>Gamma Synthtic Gut 15L W/wearguard (1.38)<option value=811>Gamma TNT2 15L (1.40)<option value=233>Gamma TNT2 16<option value=809>Gamma TNT2 17 (1.27)<option value=810>Gamma TNT2 18 (1.17)<option value=159>Gamma TNT2 Pro Plus 16<option value=814>Gamma TNT2 Pro Plus 17L (1.24)<option value=165>Gamma TNT2 Rx 16<option value=808>Gamma TNT2 Rx 17 (1.25)<option value=616>Gamma TNT2 Touch 16<option value=815>Gamma TNT2 Touch 17 (1.27)<option value=812>Gamma TNT2 Tour 16 (1.32)<option value=813>Gamma TNT2 Tour 17 (1.27)<option value=155>Gamma WearGuard Synthetic Gut 16<option value=601>Gamma Zo Black Ice 17 (1.23)<option value=602>Gamma Zo Black Ice 18 (1.18)<option value=797>Gamma Zo Dart 17 (1.25)<option value=407>Gamma Zo Ice 16<option value=408>Gamma Zo Magic 16<option value=410>Gamma Zo Power 16L<option value=235>Gamma Zo Tour 16<option value=603>Gamma Zo Tour 17 (1.25)<option value=411>Gamma Zo Tour Rough 16<option value=409>Gamma Zo Twist 16<option value=796>Gamma Zo Verve 16 (1.32)<option value=639>Gamma Zo Verve 17<option value=1009>Genesis Black Magic 16 (1.29)<option value=436>Gosen A.K. Control 16<option value=827>Gosen AK Control 17 (1.24)<option value=206>Gosen AK Pro 16<option value=442>Gosen AK Pro 17<option value=829>Gosen AK Pro CX 16 (1.30)<option value=828>Gosen AK Pro CX 17 (1.24)<option value=838>Gosen AK Pro Spin 15L (1.38)<option value=434>Gosen Compositemaster I 16<option value=435>Gosen Compositemaster II 16<option value=968>Gosen G-Tour 16 (1.30)<option value=837>Gosen Lumina Spin 16L (1.26)<option value=830>Gosen Multi CX 16 (1.30)<option value=831>Gosen Multi CX 17 (1.24)<option value=438>Gosen Nanoblend 17<option value=236>Gosen Nanocubic 16<option value=437>Gosen Nanosilver 17<option value=440>Gosen OG Sheep Micro 17<option value=441>Gosen OG Sheep Micro 18<option value=439>Gosen OG Sheep Micro Super 16L<option value=156>Gosen OG-Sheep Micro 16<option value=834>Gosen Poly Professional 16 (1.29)<option value=835>Gosen Poly Professional 17 (1.24)<option value=238>Gosen Polylon 16<option value=598>Gosen Polylon 17 (1.24)<option value=237>Gosen Polylon Comfort 16<option value=594>Gosen Polylon PolyBreak 17 (1.24)<option value=595>Gosen Polylon PolyBreak 18 (1.20)<option value=832>Gosen Polylon Premium 16 (1.32)<option value=833>Gosen Polylon Premium 16L (1.27)<option value=592>Gosen Polylon SP 16 (1.30)<option value=593>Gosen Polylon SP 17 (1.24)<option value=596>Gosen Polymaster I 16<option value=597>Gosen Polymaster II 16<option value=432>Gosen Powermaster I 16<option value=433>Gosen Powermaster II 16<option value=836>Gosen Sidewinder 16 (1.31)<option value=637>Gosen Sidewinder 17<option value=826>Gosen Tecflex 16 (1.30)<option value=173>Gosen TecGut Remplir 16<option value=209>Head C3 Rocket 16<option value=425>Head ETS 16<option value=520>Head ETS 17<option value=210>Head Fibergel Power 16<option value=523>Head Fibergel Power 17<option value=161>Head Fibergel Spin 16<option value=426>Head FXP 16<option value=525>Head FXP 17<option value=174>Head FXP Power 16<option value=524>Head FXP Power 17<option value=656>Head FXP Tour 16<option value=843>Head Hawk 16 (1.30)<option value=688>Head Hawk 17 (1.25)<option value=844>Head Hawk 18 (1.20)<option value=962>Head Hawk Rough 17<option value=846>Head Hawk Touch 18 (1.20)<option value=847>Head Hawk Touch 19 (1.15)<option value=711>Head Lynx 16 (1.30)<option value=848>Head Lynx 17 (1.25)<option value=849>Head Lynx 18 (1.20)<option value=1038>Head Lynx Touch 16g (1.30)<option value=1019>Head Lynx Tour 16 (1.30)<option value=1022>Head Lynx Tour 17 (1.25)<option value=162>Head PerfectControl 16<option value=732>Head Reflex MLT 16 (1.30)<option value=841>Head Reflex MLT 17 (1.25)<option value=202>Head RIP Control 16<option value=842>Head Rip Control 17 (1.25)<option value=208>Head RIP PerfectPower 16<option value=423>Head Sonic Pro 16<option value=521>Head Sonic Pro 17<option value=641>Head Sonic Pro Edge 16<option value=211>Head Synthetic Gut 16<option value=212>Head Synthetic Gut PPS 16<option value=840>Head Synthetic Gut PPS 17 (1.25)<option value=424>Head Ultra Tour 16<option value=522>Head Ultratour 17<option value=839>Head Velocity MLT 17 (1.25)<option value=398>IsoSpeed Axon Mono 16L<option value=399>IsoSpeed Axon Multi 16L<option value=642>IsoSpeed Black Fire 17<option value=389>IsoSpeed Control 16<option value=390>IsoSpeed Control Classic 16<option value=786>IsoSpeed Cream 17 (1.28)<option value=387>IsoSpeed Energetic 17<option value=239>IsoSpeed Energetic Plus 16<option value=388>IsoSpeed Professional Classic 17<option value=392>IsoSpeed Pulse 16<option value=393>IsoSpeed Pulse 17<option value=391>IsoSpeed Pyramid 16<option value=850>IsoSpeed V18 19 (1.12)<option value=625>Kirschbaum Black Shark 16 (1.30)<option value=626>Kirschbaum Black Shark 17 (1.25)<option value=270>Kirschbaum Competition 16/1.30<option value=551>Kirschbaum Competition 17 (1.25)<option value=550>Kirschbaum Competition 17L (1.20)<option value=1025>Kirschbaum Flash 16 (1.25)<option value=427>Kirschbaum Helix 16<option value=452>Kirschbaum Helix 17<option value=397>Kirschbaum Long Life 15<option value=853>Kirschbaum Max Power 16 (1.30)<option value=712>Kirschbaum Max Power 17 (1.25)<option value=852>Kirschbaum Max Power 18 (1.20)<option value=856>Kirschbaum Max Power Rough 16 (1.30)<option value=855>Kirschbaum Max Power Rough 17 (1.25)<option value=854>Kirschbaum Max Power Rough 18 (1.20)<option value=271>Kirschbaum P2 16/1.30<option value=547>Kirschbaum P2 17 (1.25)<option value=548>Kirschbaum P2 17L (1.20)<option value=757>Kirschbaum Pro Line Evolution 17 (1.25)<option value=268>Kirschbaum Pro Line I 1.30<option value=542>Kirschbaum Pro Line I 17 (1.25)<option value=543>Kirschbaum Pro Line I 17L (1.20)<option value=544>Kirschbaum Pro Line I 18L (1.15)<option value=267>Kirschbaum Pro Line II 1.30<option value=539>Kirschbaum Pro Line II 17 (1.25)<option value=540>Kirschbaum Pro Line II 17L (1.20)<option value=541>Kirschbaum Pro Line II 18 (1.15)<option value=617>Kirschbaum Pro Line X 16 (1.30)<option value=612>Kirschbaum Pro Line X 17 (1.25)<option value=428>Kirschbaum Spiky Shark 16<option value=451>Kirschbaum Spiky Shark 17<option value=272>Kirschbaum Super Smash 16/1.30<option value=552>Kirschbaum Super Smash 17 (1.25)<option value=478>Kirschbaum Super Smash Spiky 1.20<option value=273>Kirschbaum Super Smash Spiky 16/1.30<option value=553>Kirschbaum Super Smash Spiky 17 (1.25)<option value=176>Kirschbaum Touch Multifibre 16<option value=549>Kirschbaum Touch Multifibre 17 (1.25)<option value=269>Kirschbaum Touch Turbo 1.30<option value=545>Kirschbaum Touch Turbo 16L (1.275)<option value=546>Kirschbaum Touch Turbo 17 (1.25)<option value=1013>Kirschbaum Xplosive Speed 1.25<option value=1017>Kirschbaum Xplosive Speed 1.30<option value=277>Klip Armour Pro 16/1.30<option value=279>Klip Excellerator 16/1.30<option value=281>Klip Hardcore 16/1.30<option value=292>Klip K-Boom 16/1.30<option value=857>Klip K-Boom 18 (1.20)<option value=172>Klip Kicker 16<option value=276>Klip Legend 16 Uncoated<option value=859>Klip Legend 17 (1.25)<option value=280>Klip Scorcher 16/1.30<option value=858>Klip Scorcher 17 (1.27)<option value=157>Klip Synthetic Gut 16<option value=278>Klip Venom 16/1.30<option value=615>L-Tec Premium 3S 16L (1.25)<option value=618>L-Tec Premium 4S 16L (1.25)<option value=619>L-Tec Premium 5S 16L (1.25)<option value=621>L-Tec Premium OS 17 (1.23)<option value=620>L-Tec Premium Pro OS 16L<option value=862>LaserFibre 1200 16 (1.30)<option value=985>LaserFibre JB Tour 100 17g (1.25)<option value=969>LaserFibre Native Tour 17 (1.25)<option value=160>LaserFibre Supernatural Gut Pro Stock 16<option value=972>LaserFibre Supreme 2.0 16 (1.30)<option value=971>LaserFibre Supreme 2.0 17 (1.25)<option value=861>LaserFibre Vorso 16 (1.28)<option value=860>LaserFibre Vorso 17 (1.23)<option value=259>Leopard Plus Control 16<option value=647>Luxilon 4G 16 (1.30)<option value=628>Luxilon 4G 16L (1.25)<option value=681>Luxilon 4G Rough 16L<option value=646>Luxilon 4G S 15<option value=721>Luxilon 4G Soft 1.25<option value=334>Luxilon Adrenaline 16<option value=591>Luxilon Adrenaline 16L/1.25<option value=526>Luxilon Adrenaline 17/1.20<option value=513>Luxilon Adrenaline Rough 16L/1.25<option value=285>Luxilon ALU Power 125/16L<option value=682>Luxilon ALU Power Feel 18/1.20<option value=993>Luxilon ALU Power Rough 16L (1.25)<option value=723>Luxilon Alu Power Soft 1.25<option value=1040>Luxilon Alu Power Vibe 16 (1.25)<option value=339>Luxilon Big Banger Ace 18 (1.12)<option value=340>Luxilon Big Banger ALU Power Fluoro 17<option value=284>Luxilon Big Banger ALU Power Spin 127/16<option value=287>Luxilon Big Banger Original 130/16<option value=288>Luxilon Big Banger Rough 130/16<option value=538>Luxilon Big Banger Timo 17 (1.22)<option value=395>Luxilon Big Banger TiMO 17L (1.17)<option value=338>Luxilon Big Banger Timo 18 (1.10)<option value=291>Luxilon Big Banger XP 125/16L<option value=554>Luxilon Big Banger XP 15L (1.38)<option value=753>Luxilon Element 1.30<option value=863>Luxilon Element 16L (1.25)<option value=975>Luxilon Element Rough 16 (1.30)<option value=995>Luxilon LXN Smart 16 (1.30)<option value=1010>Luxilon LXN Smart 16L (1.25)<option value=282>Luxilon M2 Plus 130/16<option value=283>Luxilon M2 Pro 125/16<option value=290>Luxilon Monotec Super Poly 1.25/16L<option value=527>Luxilon Monotec Supersense 16L/1.25<option value=289>Luxilon Monotec Zolo 125/16<option value=396>Luxilon Monotec Zolo 15L<option value=959>Luxilon Natural Gut 1.25<option value=514>Luxilon Savage 16/1.27<option value=481>Mantis Comfort Poly 16<option value=483>Mantis Comfort Synthetic 16<option value=482>Mantis Power Poly 17<option value=865>MSV Co-Focus 17L (1.18)<option value=381>MSV Co.-Focus 16L<option value=367>MSV Focus Evo 16<option value=370>MSV Focus Evo 17<option value=636>MSV Focus Hex 17L (1.18)<option value=652>MSV Focus Hex Soft  17 (1.25)<option value=864>MSV Focus Hex Soft 17L (1.20)<option value=980>MSV Focus-Hex +38 16L (1.25)<option value=987>MSV Focus-Hex 16 (1.23)<option value=986>MSV Focus-Hex 16 (1.27)<option value=497>MSV Hepta-Twist 16<option value=487>MSV Hepta-Twist 17<option value=692>One Strings Carbon NRG 16<option value=693>One Strings Carbon Tour 17 (1.25)<option value=299>Pacific ATP Poly Power Pro 16L<option value=356>Pacific Classic Natural Gut 16<option value=307>Pacific PMX 16L<option value=297>Pacific PMX 17<option value=294>Pacific Poly Force 16L<option value=304>Pacific Poly Force 17<option value=306>Pacific Poly Force Xtreme 16L<option value=866>Pacific Poly Power Pro 16 (1.30)<option value=869>Pacific Poly Power Pro 16L (1.25)<option value=293>Pacific Power Line 16L<option value=295>Pacific Power Line 17<option value=298>Pacific Power Twist 16L<option value=296>Pacific Premium Power X 16L<option value=872>Pacific Prime Gut Orange Bull 16 (1.30)<option value=871>Pacific Prime Gut Orange Bull 16L (1.25)<option value=355>Pacific Prime Natural Gut 16<option value=352>Pacific Prime Natural Gut 16L<option value=354>Pacific Tough Gut 16<option value=301>Pacific Tough Gut 16L<option value=870>Pacific X Force 16L (1.29)<option value=300>Pacific X Force 17<option value=305>Pacific X Force 18<option value=868>Pacific XCite 16 (1.30)<option value=867>Pacific XCite 16L (1.25)<option value=572>Poly Star Classic 16 (1.30)<option value=573>Poly Star Classic 16L (1.25)<option value=574>Poly Star Classic 17 (1.20)<option value=575>Poly Star Energy 16 (1.30)<option value=576>Poly Star Energy 16L (1.25)<option value=577>Poly Star Energy 17 (1.20)<option value=579>Poly Star Strike 16 (1.30)<option value=578>Poly Star Strike 16L (1.25)<option value=580>Poly Star Turbo 16 (1.30)<option value=581>Poly Star Turbo 16L (1.25)<option value=590>Polyfibre Black Venom 16 (1.30)<option value=589>Polyfibre Black Venom 16L (1.25)<option value=873>Polyfibre Black Venom Rough 16L (1.25)<option value=430>Polyfibre Cobra 17/1.20<option value=569>Polyfibre Hexablade 16L (1.25)<option value=570>Polyfibre Hexablade 17L (1.18)<option value=261>Polyfibre Hightec Premium 16/1.30<option value=449>Polyfibre Hightec Premium 16L<option value=450>Polyfibre Hightec Premium 17<option value=874>Polyfibre Panthera 16 (1.30)<option value=262>Polyfibre Poly Hightec 16/1.30<option value=444>Polyfibre Poly Hightec 16L<option value=445>Polyfibre Poly Hightec 17<option value=446>Polyfibre Poly Hightec 18<option value=260>Polyfibre TCS 16/1.30<option value=447>Polyfibre TCS 16L<option value=448>Polyfibre TCS 17<option value=588>Polyfibre TCS 18 (1.15)<option value=431>Polyfibre TCS Rapid 16L/1.25<option value=429>Polyfibre Viper 16L/1.25<option value=443>Polyfibre Viper 17/1.20<option value=515>Prince Beast XP 16<option value=994>Prince Diablo Prism 17<option value=973>Prince Lightning Pro 16 (1.30)<option value=317>Prince Lightning XX 16<option value=327>Prince Lightning XX 17<option value=983>Prince Perfection 16 (1.30)<option value=323>Prince Poly EXP 17<option value=328>Prince Poly Spin 3D<option value=663>Prince Premier Control 15<option value=664>Prince Premier Control 15L<option value=661>Prince Premier Control 16<option value=662>Prince Premier Control 17<option value=310>Prince Premier LT 17<option value=333>Prince Premier LT 18<option value=658>Prince Premier Power 16<option value=659>Prince Premier Power 17<option value=660>Prince Premier Power 18<option value=667>Prince Premier Touch 15L<option value=666>Prince Premier Touch 16<option value=665>Prince Premier Touch 17<option value=316>Prince Premier W/ Softflex 17<option value=312>Prince Premier W/Softflex 16<option value=308>Prince Recoil 16<option value=313>Prince Syn Gut Original 16<option value=330>Prince Syn Gut Original 17<option value=320>Prince Synthetic Gut 16 Duraflex<option value=315>Prince Synthetic Gut 17 Duraflex<option value=332>Prince Synthetic Gut 18 Duraflex<option value=325>Prince Synthetic Gut Multifilament 16<option value=324>Prince Synthetic Gut Multifilament 17<option value=319>Prince Topspin Plus 16<option value=326>Prince Topspin W/ Duraflex 15L<option value=318>Prince Tour 16<option value=331>Prince Tour 17<option value=679>Prince Tour XC 15L<option value=678>Prince Tour XC 16L<option value=677>Prince Tour XC 17L<option value=676>Prince Tour XP 15L<option value=675>Prince Tour XP 16<option value=877>Prince Tour XP 17 (1.25)<option value=948>Prince Tour XR 15L (1.35)<option value=875>Prince Tour XR 16 (1.30)<option value=876>Prince Tour XR 17 (1.25)<option value=674>Prince Tour XS 1.35<option value=669>Prince Tour XS 16<option value=668>Prince Tour XT 18<option value=314>Prince Tournament Nylon 15L<option value=322>Prince Tournament Poly 16<option value=321>Prince Tournament Poly 17<option value=329>Prince Twisted 16L<option value=1012>Prince Vortex 16 (1.30)<option value=739>RS RS Lyon 17<option value=953>RS RS Lyon 17L (1.20)<option value=649>Signum Pro Firestorm 1.25<option value=881>Signum Pro Firestorm 16 (1.30)<option value=413>Signum Pro Hyperion 16<option value=468>Signum Pro Hyperion 17 (1.24)<option value=880>Signum Pro Hyperion 18 (1.18)<option value=879>Signum Pro Plasma HEXtreme 16 (1.30)<option value=263>Signum Pro Plasma HEXtreme 16L/1.25<option value=264>Signum Pro Plasma Pure 16L/1.28<option value=265>Signum Pro Poly Megaforce 16<option value=467>Signum Pro Poly Megaforce 17 (1.19)<option value=878>Signum Pro Poly Plasma 17 (1.23)<option value=266>Signum Pro Poly Speed Spin 1.28<option value=489>Signum Pro Poly-Plasma 16L<option value=562>Signum Pro Poly-Plasma 17L (1.18)<option value=415>Signum Pro Poly-Plasma Pure 16L<option value=465>Signum Pro Poly-Plasma Pure 17 (1.23)<option value=466>Signum Pro Poly-Plasma Pure 17L (1.18)<option value=414>Signum Pro Tornado 16<option value=469>Signum Pro Tornado 17 (1.23)<option value=882>Signum Pro Tornado 18 (1.17)<option value=1011>Signum Pro X-Perience 17 (1.24)<option value=984>Signum Pro Yellow Jacket 17g (1.22)<option value=564>Solinco Barb Wire 16<option value=885>Solinco Barb Wire 16L (1.25)<option value=583>Solinco Barb Wire 17 (1.20)<option value=1018>Solinco Confidential 16 (1.30)<option value=730>Solinco Hyper-G 16<option value=951>Solinco Hyper-G 16L (1.25)<option value=883>Solinco Hyper-G 17 (1.20)<option value=884>Solinco Hyper-G 18 (1.15)<option value=1023>Solinco Hyper-G-Soft 16L (1.25)<option value=400>Solinco Outlast 16<option value=892>Solinco Outlast 16L (1.25)<option value=401>Solinco Outlast 17<option value=893>Solinco Outlast 18 (1.15)<option value=402>Solinco Revolution 16<option value=894>Solinco Revolution 16L (1.25)<option value=403>Solinco Revolution 17<option value=895>Solinco Revolution 18 (1.16)<option value=889>Solinco Tour Bite 15L (1.35)<option value=404>Solinco Tour Bite 16<option value=645>Solinco Tour Bite 16 Soft<option value=624>Solinco Tour Bite 16L (1.25)<option value=405>Solinco Tour Bite 17<option value=587>Solinco Tour Bite 18 (1.15)<option value=890>Solinco Tour Bite 19 (1.10)<option value=891>Solinco Tour Bite 20 (1.05)<option value=725>Solinco Tour Bite Diamond Rough 16 (1.30)<option value=726>Solinco Tour Bite Diamond Rough 16L (1.25)<option value=727>Solinco Tour Bite Diamond Rough 17 (1.20)<option value=886>Solinco Tour Bite Soft 16L (1.25)<option value=887>Solinco Tour Bite Soft 17 (1.20)<option value=888>Solinco Tour Bite Soft 18 (1.15)<option value=406>Solinco Vanquish 16<option value=896>Solinco Vanquish 17 (1.20)<option value=897>Solinco X-Natural 16 (1.30)<option value=898>Solinco X-Natural 17 (1.20)<option value=563>Super String Tour Players V3 17 (1.20)<option value=484>SuperString Nikita Original 1.25<option value=493>SuperString Nikita Soft 16L<option value=507>SuperString Pure Control V8 17<option value=492>SuperString Viper V2 Rough 16L<option value=499>SuperString VooDoo Tour V9 17<option value=901>Tecnifibre Black Code 15L (1.32)<option value=416>Tecnifibre Black Code 16<option value=470>Tecnifibre Black Code 17<option value=471>Tecnifibre Black Code 18<option value=905>Tecnifibre Black Code 4S 16 (1.30)<option value=736>Tecnifibre Black Code 4S 17 (1.25)<option value=904>Tecnifibre Black Code 4S 18 (1.20)<option value=586>Tecnifibre Duramix HD 16<option value=528>Tecnifibre Duramix HD 17<option value=419>Tecnifibre E-Matrix 16<option value=475>Tecnifibre E-Matrix 17<option value=710>Tecnifibre HDX Tour 16 (1.30)<option value=908>Tecnifibre HDX Tour 17 (1.24)<option value=1014>Tecnifibre Ice Code 16 (1.30)<option value=421>Tecnifibre Multi-Feel 16<option value=561>Tecnifibre Multi-Feel 17 (1.25)<option value=974>Tecnifibre Multifeel 16 Black (1.30)<option value=242>Tecnifibre NRG2 16<option value=529>Tecnifibre NRG2 17/1.24<option value=560>Tecnifibre NRG2 18 (1.18)<option value=422>Tecnifibre Polyspin 16L<option value=420>Tecnifibre Pro Mix 16<option value=472>Tecnifibre Pro Mix 17<option value=241>Tecnifibre Pro Red Code 16<option value=474>Tecnifibre Pro Red Code 17<option value=473>Tecnifibre Pro Red Code 18<option value=988>Tecnifibre Pro Red Code Wax 17<option value=653>Tecnifibre Razor Code 16 (1.30)<option value=907>Tecnifibre Razor Code 17 (1.25)<option value=906>Tecnifibre Razor Code 18 (1.20)<option value=902>Tecnifibre Ruff Code 16 (1.30)<option value=903>Tecnifibre Ruff Code 17 (1.25)<option value=418>Tecnifibre TGV 16<option value=530>Tecnifibre TGV 17/1.25<option value=1020>Tecnifibre Triax 16 (1.33)<option value=480>Tecnifibre X-Code 16<option value=417>Tecnifibre X-One Biphase 16<option value=476>Tecnifibre X-One Biphase 17<option value=488>Tecnifibre X-One Biphase 18<option value=240>Tecnifibre XR3 16<option value=477>Tecnifibre XR3 17<option value=929>Toalson Leoina 77 (1.30)<option value=504>Topspin Cyber Blue 16<option value=485>Topspin Cyber Blue 17<option value=952>Topspin Cyber Blue 17L (1.20)<option value=900>Topspin Cyber Delta 17 (1.26)<option value=503>Topspin Cyber Flash 16<option value=490>Topspin Cyber Flash 17<option value=505>Topspin Cyber Flash 17L<option value=899>Topspin Cyber Whirl 17 (1.24)<option value=365>Tourna Big Hitter 16<option value=910>Tourna Big HItter Black 7 16 (1.25)<option value=631>Tourna Big Hitter Black 7 17<option value=364>Tourna Big Hitter Blue 16<option value=384>Tourna Big Hitter Blue 17<option value=565>Tourna Big Hitter Blue Rough 16<option value=494>Tourna Big Hitter Blue Rough 17<option value=911>Tourna Big HItter Silver 16<option value=382>Tourna Big Hitter Silver 17<option value=1016>Tourna Big Hitter Silver 7 Tour 16 (1.30)<option value=566>Tourna Big Hitter Silver Rough 16<option value=567>Tourna Big Hitter Silver Rough 17<option value=704>Tourna Black Zone 16<option value=909>Tourna Black Zone 17<option value=383>Tourna Irradiated 16<option value=912>Tourna Irradiated 17<option value=917>Tourna Quasi Gut 17<option value=486>Tourna Quasi-Gut 16<option value=916>Tourna Quasi-Gut Armor 16<option value=915>Tourna Quasi-Gut Armor 17<option value=913>Tourna Synthetic Gut Armor 16<option value=914>Tourna Synthetic Gut Armor 17<option value=454>Volkl Cyclone 16<option value=534>Volkl Cyclone 17<option value=535>Volkl Cyclone 18<option value=920>Volkl Cyclone 18L (1.15)<option value=729>Volkl Cyclone 19 (1.10)<option value=918>Volkl Cyclone Tour 16 (1.30)<option value=638>Volkl Cyclone Tour 17 (1.25)<option value=919>Volkl Cyclone Tour 18 (1.20)<option value=368>Volkl Gripper 16<option value=380>Volkl Gripper 17<option value=453>Volkl Power-Fiber II 16<option value=495>Volkl Power-Fiber II 17<option value=559>Volkl Power-Fiber II 18<option value=536>Volkl Synthetic Gut 16<option value=537>Volkl Synthetic Gut 17<option value=531>Volkl V-Pro 16<option value=532>Volkl V-Pro 17<option value=533>Volkl V-Pro 18<option value=1015>Volkl V-Square 16 (1.30)<option value=713>Volkl V-Star 16 (1.30)<option value=922>Volkl V-Star 18 (1.20)<option value=923>Volkl V-Star 18L (1.15)<option value=924>Volkl V-Star 19 (1.10)<option value=648>Volkl V-Torque 16<option value=921>Volkl V-Torque 18 (1.18)<option value=970>Volkl V-Torque Tour 16 (1.30)<option value=928>Weiss Cannon 6 Star 16 (1.30)<option value=643>Weiss Cannon Black 5 Edge 17 (1.24)<option value=963>Weiss Cannon Blue Rock N Power<option value=456>Weiss Cannon Explosiv 1.30<option value=258>Weiss Cannon MatchPower 1.25<option value=927>Weiss Cannon Mosquito Bite 18 (1.16)<option value=949>Weiss Cannon Red Ghost  17L (1.18)<option value=257>Weiss Cannon Scorpion 1.22<option value=463>Weiss Cannon Scorpion 1.33<option value=926>Weiss Cannon Scorpion 16L (1.28)<option value=462>Weiss Cannon Silverstring 1.25<option value=256>Weiss Cannon Silverstring 120<option value=455>Weiss Cannon Turbotwist 17 (1.24)<option value=464>Weiss Cannon Turbotwist 17L (1.18)<option value=950>Weiss Cannon Ultra Cable 17 (1.23)<option value=253>Wilson Enduro Gold 16<option value=350>Wilson Enduro Mono 16L<option value=351>Wilson Enduro Mono 16L<option value=252>Wilson Enduro Pro 16<option value=585>Wilson Enduro Pro 17 (1.25)<option value=336>Wilson Enduro Tour 16<option value=335>Wilson Enduro Tour 17<option value=337>Wilson Enduro Tour 18<option value=248>Wilson Extreme 16 Synthetic Gut<option value=342>Wilson Hollow Core 16<option value=519>Wilson Hollow Core Pro 16<option value=348>Wilson Hollow Core Pro 17<option value=251>Wilson K-Gut 16<option value=249>Wilson K-Gut Pro 16<option value=361>Wilson Natural Gut 16<option value=990>Wilson Natural Gut 16 (1.30)<option value=359>Wilson Natural Gut 17<option value=938>Wilson NXT 15L (1.35)<option value=344>Wilson NXT 16<option value=347>Wilson NXT 17<option value=584>Wilson NXT Control 16 (1.32)<option value=687>Wilson NXT Duramax 15 (1.40)<option value=935>Wilson NXT Duramax 16 (1.32)<option value=937>Wilson NXT Max 15L (1.35)<option value=250>Wilson NXT Max 16<option value=343>Wilson NXT OS<option value=936>Wilson NXT Power 17 (1.26)<option value=341>Wilson NXT Tour 16<option value=345>Wilson NXT Tour 17<option value=686>Wilson Optimus 16 (1.30)<option value=246>Wilson Reaction 16<option value=518>Wilson Red Alert 16<option value=940>Wilson Revolve 15 (1.35)<option value=939>Wilson Revolve 16 (1.30)<option value=724>Wilson Revolve 17 (1.25)<option value=958>Wilson Revolve Spin 16<option value=672>Wilson Ripspin 15<option value=670>Wilson Ripspin 16<option value=671>Wilson Ripspin 17<option value=934>Wilson Sensation 15 (1.35)<option value=243>Wilson Sensation 16<option value=346>Wilson Sensation 17<option value=933>Wilson Sensation Control 16 (1.30)<option value=245>Wilson Sensation Supreme 16<option value=517>Wilson SGX 16<option value=516>Wilson Shock Shield 16<option value=644>Wilson Spin Cycle 16L<option value=244>Wilson Stamina 16<option value=930>Wilson Synthetic Gut Control 17 (1.25)<option value=349>Wilson Synthetic Gut Extreme 17<option value=932>Wilson Synthetic Gut Power 16 (1.30)<option value=931>Wilson Synthetic Gut Power 17 (1.25)<option value=705>Y-Tex Quadro Twist 16L<option value=945>Yonex Mono Preme 16 (1.30)<option value=274>Yonex Poly Tour 130/16<option value=961>Yonex Poly Tour Air 16L<option value=977>Yonex Poly Tour Drive 16L (1.25)<option value=979>Yonex Poly Tour Fire 16L (1.25)<option value=941>Yonex Poly Tour HS 16 (1.30)<option value=944>Yonex Poly Tour HS 16L (1.25)<option value=943>Yonex Poly Tour Pro 17 (1.20)<option value=600>Yonex Poly Tour Pro Yellow 16 (1.30)<option value=599>Yonex Poly Tour Pro Yellow 16L (1.25)<option value=942>Yonex Poly Tour Spin 16L (1.25)<option value=755>Yonex Poly Tour Spin G 1.25<option value=978>Yonex Poly Tour Strike 16L (1.25)<option value=967>Yonex Poly Tour Tough 16L<option value=1024>Yonex PolyTour REV 16 (1.30)<option value=1034>Yonex Polytour Rev 16L (1.25)<option value=982>Yonex Rexis 16 (1.30)<option value=1035>Yonex Rexis Comfort 16L (1.25)<option value=1036>Yonex Rexis Speed 16L (1.25)<option value=946>Yonex Tour Super 850 16 (1.30)<option value=947>Yonex Tour Super Pro 850 16 (1.32)<option value=254>Yonex Tournament 50 16L<option value=275>Yonex Tournament 80 Spin 15L-16				</select>
+			</td>
+			</tr>
+			<tr>
+				<td ><label for='xref_tensionbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xref_tensionbox' name='display[]' value='xref_tension'></td>
+				<td><label for="zref_tension" class="selectlabel3">Choose Reference Tension</label>
+				<select id='zref_tension' name='zref_tension'>
+					<!--<option value='all'>All</option>-->
+					<option value='all'>All</option>					<option value='28'>High (62 lbs)</option>					<option value='23' selected>Medium (51 lbs)</option>					<option value='18'>Low (40 lbs)</option>					</select>
+				</td>
+				
+				
+			</tr>
+			<tr>
+				<td ><label for='xhammerbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xhammerbox' name='display[]' value='xhammer'></td>				<td ><label for="zhammer" class="selectlabel3">Choose Swing Speed  (fast, medium, slow)</label>
+				<select id="zhammer" name='zhammer'>
+					<option value='all'>All</option>					<option value='1' selected>Fast</option>					<option value='2'>Medium</option>					<option value='3'>Slow</option>					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td ><label for='xmaterialbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xmaterialbox' name='display[]' value='xmaterial' checked></td>				<td><label for="zmaterial" class="selectlabel3">Choose String Material</label>
+				<select name='zmaterial' id='zmaterial'>
+						<option value='all' selected>All</option>												<option value='Gut'>Gut</option>						<option value='Nylon'>Nylon</option>						<option value='Nylon/Polyester'>Nylon/Polyester</option>						<option value='Nylon/Polyolefin'>Nylon/Polyolefin</option>						<option value='Nylon/Polyurethane'>Nylon/Polyurethane</option>																		<option value='Nylon/Zyex'>Nylon/Zyex</option>						<option value='Polyolefin'>Polyolefin</option>												<option value='Polyester'>Polyester</option>																	</select>
+				</td>
+			</tr>
+			<tr>
+				<td ><label for='xgauge_nominalbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xgauge_nominalbox' name='display[]' value='xgauge_nominal'></td>				<td class="selectlabel4">Gauge nominal</td>
+			</tr>
+			<tr>
+				<td ><label for='xgauge_actualbox' class='selectlabel3'> Show<br></label><input type='checkbox' name='display[]' id='xgauge_actualbox' value='xgauge_actual'></td>				<td class="selectlabel4">Gauge actual</td>
+			</tr>
+			<tr>
+				<td ><label for='xelongationbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xelongationbox' name='display[]' value='xelongation18'></td>				<td class="selectlabel4">Static Stretch at 40 lbs</td>
+			</tr>
+			<tr>
+				<td ><label for='xelongation23box' class='selectlabel3'> Show<br></label><input type='checkbox' name='display[]' id='xelongation23box' value='xelongation23'></td>				<td class="selectlabel4">Static Stretch at 51 lbs</td>
+			</tr>
+			<tr>
+				<td ><label for='xelongation28box' class='selectlabel3'> Show<br></label><input type='checkbox' name='display[]' id='xelongation28box' value='xelongation28'></td>				<td class="selectlabel4">Static Stretch at 62 lbs</td>
+			</tr>
+			<tr>
+				<td ><label for='xstart_tensionbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xstart_tensionbox' name='display[]' value='xstart_tension'></td>				<td class="selectlabel4">Actual tension</td>
+			</tr>
+			<tr>
+				<td ><label for=xtension_changebox' class='selectlabel3'> Show<br></label><input type='checkbox' id=xtension_changebox' name='display[]' value='xtension_change'></td>				<td class="selectlabel4">Impact Tension Change (lbs)</td>
+			</tr>
+			<tr>
+				<td ><label for='xdurationbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xdurationbox' name='display[]' value='xduration'></td>				<td class="selectlabel4">Impact Duration (ms)</td>
+			</tr>
+			<tr>
+				<td ><label for='xdeflectionbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xdeflectionbox' name='display[]' value='xdeflection'></td>				<td class="selectlabel4">Impact Deflection (in)</td>
+			</tr>
+			<tr>
+				<td ><label for='xpeak_tensionbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xpeak_tensionbox' name='display[]' value='xpeak_tension'></td>				<td class="selectlabel4">Peak Tension (lbs)</td>
+			</tr>
+			<tr>
+				<td ><label for='xpeak_forcebox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xpeak_forcebox' name='display[]' value='xpeak_force'></td>				<td class="selectlabel4">Peak Transverse Force (lbs)</td>
+			</tr>
+			<tr>
+				<td ><label for='xaverage_forcebox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xaverage_forcebox' name='display[]' value='xaverage_force'></td>				<td class="selectlabel4">Average Transverse Force (lbs)</td>
+			</tr>
+			<tr>
+				<td ><label for='xstiffnessbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xstiffnessbox' name='display[]' value='xstiffness' checked></td>				<td class="selectlabel4">Stiffness (lbs/in)</td>
+			</tr>
+			<tr>
+				<td ><label for='xstatic_lossbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xstatic_lossbox' name='display[]' value='xstatic_loss'></td>				<td class="selectlabel4">Static Tension Loss (lbs)</td>
+			</tr>
+			<tr>
+				<td ><label for='xstable_lossbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xstable_lossbox' name='display[]' value='xstable_loss'></td>				<td class="selectlabel4">Stabilization Tension Loss (lbs)</td>
+			</tr>
+			<tr>
+				<td ><label for='ximpact_lossbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='ximpact_lossbox' name='display[]' value='ximpact_loss'></td>				<td class="selectlabel4">Impact Tension Loss (lbs)</td>
+			</tr>
+			<tr>
+				<td ><label for='xtotal_lossbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xtotal_lossbox' name='display[]' value='xtotal_loss'></td>				<td class="selectlabel4">Total Tension Loss (lbs)</td>
+			</tr>
+			<tr>
+				<td ><label for='xloss_percentbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xloss_percentbox' name='display[]' value='xloss_percent' checked></td>				<td class="selectlabel4">Tension Loss Percent (%)</td>
+			</tr>
+			<tr>
+				<td ><label for='xenergybox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xenergybox' name='display[]' value='xenergy'></td>				<td class="selectlabel4">Energy Return (percent)</td>
+			</tr>
+			<tr>
+				<!--<td>Show<br><input type='checkbox' name='display[]' value='xstringCOF'></td>-->
+				<td ><label for='xstringCOFbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xstringCOFbox' name='display[]' value='xstringCOF'></td>				<td class="selectlabel4">String-to-String Friction (COF)</td>
+			</tr>
+			<tr>
+				<td ><label for='xballCOFbox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xballCOFbox' name='display[]' value='xballCOF'></td>				<td class="selectlabel4">String-to-Ball Friction (COF)</td>
+			</tr>
+			<tr>
+				<td ><label for='xspinratiobox' class='selectlabel3'> Show<br></label><input type='checkbox' id='xspinratiobox' name='display[]' value='xspinratio' checked></td>				<td class="selectlabel4">Spin Potential Ratio</td>
+			</tr>
+
+			<tr>
+				<td colspan='2'>
+					<label for="sort1" class="selectlabel3">Sort Order 1</label>
+					<select id='sort1' name='sort1'>
+						<option value=''>None<option value='brand' selected>Brand<option value='model'>String<option value='ref_tension'>Reference Tension<option value='hammer_block'>Swing Speed<option value='material'>Material<option value='gauge_nominal'>Gauge Nominal<option value='start_tension'>Actual Tension<option value='tension_change'>Tension Change<option value='duration'>Dwell Time<option value='deflection'>Deflection<option value='peak_tension'>Peak Tension<option value='peak_force'>Peak Force<option value='average_force'>Average Force<option value='stiffness'> Stiffness<option value='total_loss'>Total Tension Loss<option value='loss_percent'>Tension Loss Percent<option value='energy'>Energy Return<option value='stringCOF'>String-to-String Friction<option value='ballCOF'>String-to-Ball Friction<option value='spinratio'>Spin Potential					</select><br><br>
+
+					<label for="sort2" class="selectlabel3">Sort Order 2</label>
+					<select id='sort2' name='sort2'>
+						<option value='' selected>None<option value='brand'>Brand<option value='model'>String<option value='ref_tension'>Reference Tension<option value='hammer_block'>Swing Speed<option value='material'>Material<option value='gauge_nominal'>Gauge Nominal<option value='start_tension'>Actual Tension<option value='tension_change'>Tension Change<option value='duration'>Dwell Time<option value='deflection'>Deflection<option value='peak_tension'>Peak Tension<option value='peak_force'>Peak Force<option value='average_force'>Average Force<option value='stiffness'> Stiffness<option value='total_loss'>Total Tension Loss<option value='loss_percent'>Tension Loss Percent<option value='energy'>Energy Return<option value='stringCOF'>String-to-String Friction<option value='ballCOF'>String-to-Ball Friction<option value='spinratio'>Spin Potential					</select><br><br>
+
+					<label for="sort3" class="selectlabel3">Sort Order 3</label>
+					<select id='sort3' name='sort3'>
+						<option value='' selected>None<option value='brand'>Brand<option value='model'>String<option value='ref_tension'>Reference Tension<option value='hammer_block'>Swing Speed<option value='material'>Material<option value='gauge_nominal'>Gauge Nominal<option value='start_tension'>Actual Tension<option value='tension_change'>Tension Change<option value='duration'>Dwell Time<option value='deflection'>Deflection<option value='peak_tension'>Peak Tension<option value='peak_force'>Peak Force<option value='average_force'>Average Force<option value='stiffness'> Stiffness<option value='total_loss'>Total Tension Loss<option value='loss_percent'>Tension Loss Percent<option value='energy'>Energy Return<option value='stringCOF'>String-to-String Friction<option value='ballCOF'>String-to-Ball Friction<option value='spinratio'>Spin Potential					</select><br><br>
+
+
+					<label for="sort4" class="selectlabel3">Sort Order 4</label>
+					<select id='sort4' name='sort4'>
+						<option value='' selected>None<option value='brand'>Brand<option value='model'>String<option value='ref_tension'>Reference Tension<option value='hammer_block'>Swing Speed<option value='material'>Material<option value='gauge_nominal'>Gauge Nominal<option value='start_tension'>Actual Tension<option value='tension_change'>Tension Change<option value='duration'>Dwell Time<option value='deflection'>Deflection<option value='peak_tension'>Peak Tension<option value='peak_force'>Peak Force<option value='average_force'>Average Force<option value='stiffness'> Stiffness<option value='total_loss'>Total Tension Loss<option value='loss_percent'>Tension Loss Percent<option value='energy'>Energy Return<option value='stringCOF'>String-to-String Friction<option value='ballCOF'>String-to-Ball Friction<option value='spinratio'>Spin Potential					</select><br><br>
+
+					<label for="sort5" class="selectlabel3">Sort Order 5</label>
+					<select id='sort5' name='sort5'>
+						<option value='' selected>None<option value='brand'>Brand<option value='model'>String<option value='ref_tension'>Reference Tension<option value='hammer_block'>Swing Speed<option value='material'>Material<option value='gauge_nominal'>Gauge Nominal<option value='start_tension'>Actual Tension<option value='tension_change'>Tension Change<option value='duration'>Dwell Time<option value='deflection'>Deflection<option value='peak_tension'>Peak Tension<option value='peak_force'>Peak Force<option value='average_force'>Average Force<option value='stiffness'> Stiffness<option value='total_loss'>Total Tension Loss<option value='loss_percent'>Tension Loss Percent<option value='energy'>Energy Return<option value='stringCOF'>String-to-String Friction<option value='ballCOF'>String-to-Ball Friction<option value='spinratio'>Spin Potential					</select><br><br>
+
+
+				</td>
+			</tr>
+			<tr>
+				<td colspan='2'><input type='submit' id='getreport' value='Get Report'><br><br><input type='button' value='CLEAR form and start over' onclick='clearup()'><br><br><br><br><br><br><br><br><br><br></td>
+			</tr>
+<!--			<tr>
+				<td colspan='2'><input type='button' value='CLEAR form and start over' onclick='clearup()'><br><br><br><br><br>
+				</td>
+			</tr>
+-->				
+		</tbody>	
+		</table>
+		</form>
+
+
+						
+
+		</nav>
+		</aside>
+	</div> <!-- end #sidemenudiv-->
+
+
+	
+</div> <!--end content-->
+
+		<footer class="pagefooter">
+	<ul>
+		<li><a href="https://twu.tennis-warehouse.com/learning_center/index.php">TWU Home</a></li>
+		<li><a href="https://twu.tennis-warehouse.com/learning_center/about.php">About</a></li>
+		<li><a href="https://www.tennis-warehouse.com/">TW Home</a></li>
+	</ul>
+</footer>
+		
+</div> <!--end wrapper-->
+
+<script>
+	$('.infobutton').click(showinfo);
+		function showinfo(e){
+			$(e.target).parent().next().slideToggle(400);
+			var slidestatus =$('.infobutton').text();
+			if(slidestatus == 'Show Instructions'){
+				$('.infobutton').text('Hide Instructions');
+			}else if(slidestatus == 'Hide Instructions'){
+				$('.infobutton').text('Show Instructions');
+			}
+		}
+</script>
+
+
+<script>
+	$('.infobutton2').click(showinfo);
+		function showinfo(e){
+			$(e.target).parent().next().slideToggle(400);
+			var slidestatus =$('.infobutton2').text();
+			if(slidestatus == 'Show Instructions'){
+				$('.infobutton2').text('Hide Instructions');
+			}else if(slidestatus == 'Hide Instructions'){
+				$('.infobutton2').text('Show Instructions');
+			}
+		}
+</script>
+
+
+
+
+<!--<script src="http://www.google-analytics.com/urchin.js"
+type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2417687-5";
+urchinTracker();
+</script>
+-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2417687-5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-2417687-5');
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
