@@ -1,4 +1,4 @@
-{
+const allStrings = {
   "Alien Black Diamond 16": {
     "String": "Alien Black Diamond 16",
     "Material": "Polyester",
