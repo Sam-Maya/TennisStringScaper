@@ -5151,10 +5151,8 @@ app.get('/api/:string', (request,response)=>{
   if(allStrings[stringName]){
       response.json(allStrings[stringName])
   }else{
-      response.json(allStrings["Alien Black Diamond 16"])
+      response.json(allStrings["Solinco Hyper-G 17 (1.20)"])
   }
 })
 
-app.listen(process.env.PORT || PORT, ()=>{
-  console.log(`The server is running on port ${PORT}! You better go catch it!`)
-})
+app.listen(process.env.PORT || PORT, ()=>{})
