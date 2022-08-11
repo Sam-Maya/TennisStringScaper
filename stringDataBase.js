@@ -1,3 +1,10 @@
+const express = require('express')
+const app = express()
+const cors = require('cors')
+const PORT = 8000
+
+app.use(cors())
+
 const allStrings = {
   "Alien Black Diamond 16": {
     "String": "Alien Black Diamond 16",
@@ -5138,3 +5145,16 @@ const allStrings = {
     "Spin Potential": "2.5"
   }
 }
+
+app.get('/api/:string', (request,response)=>{
+  const stringName = request.params.string.split('_').join(' ')
+  if(allStrings[stringName]){
+      response.json(allStrings[stringName])
+  }else{
+      response.json(allStrings["Alien Black Diamond 16"])
+  }
+})
+
+app.listen(process.env.PORT || PORT, ()=>{
+  console.log(`The server is running on port ${PORT}! You better go catch it!`)
+})
